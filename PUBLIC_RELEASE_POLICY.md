@@ -194,6 +194,14 @@ If the answer to any of the first five questions is yes, the material should be 
 
 ---
 
+## Repository Safeguards
+
+The repository uses a restrictive `.gitignore` allowlist so that only curated documentation and selected public images are included by default in normal local Git workflows.
+
+This is a workflow safeguard, not an access-control mechanism. It does not prevent deliberate manual uploads through the GitHub web interface, and it does not remove files that are already tracked. Release review remains required before publication.
+
+---
+
 ## Licensing
 
 Publication in this repository does not by itself grant permission to manufacture, reproduce, modify, distribute, or commercially use the engineering designs.
