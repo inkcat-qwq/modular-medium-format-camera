@@ -2,8 +2,8 @@
 
 > **Document type:** Historical revision index  
 > **Status:** Living document  
-> **Last updated:** September 2026
-> > **Public documentation note:** This index describes publicly documented development milestones and may intentionally lag behind private internal development.
+> **Last updated:** September 2026  
+> **Public documentation note:** This index describes publicly documented development milestones and may intentionally lag behind private internal development.
 
 This document records historical revision identifiers used during development of the Modular Medium Format Camera project.
 
@@ -22,7 +22,10 @@ Historical items may be described using the following states:
 - `CANDIDATE` — retained for further development
 - `REJECTED` — investigated but not retained
 - `SUPERSEDED` — replaced by a later direction
-- `CURRENT` — part of the current development direction
+- `CURRENT` — part of the currently published development direction
+- `RETAINED MILESTONE` — historically important direction retained as a basis for later work
+- `RETAINED CANDIDATE` — candidate retained within a development path
+- `ALTERNATIVE CANDIDATE` — retained comparator rather than the primary documented candidate
 
 ---
 
@@ -182,7 +185,7 @@ Used to explore assembly and removal constraints within the developing camera ar
 ### VF9_DIRECT01
 
 **Area:** Optical viewfinder  
-**Status:** RETAINED DEVELOPMENT MILESTONE
+**Status:** RETAINED MILESTONE
 
 Major transition toward a direct-view optical finder architecture.
 
@@ -192,7 +195,7 @@ This direction reduced dependence on more complex relay systems and became the b
 ### D3
 
 **Area:** Direct-view optical configuration  
-**Status:** RETAINED OPTICAL CANDIDATE
+**Status:** RETAINED CANDIDATE
 
 Primary optical candidate retained from the direct-view development path.
 
@@ -226,9 +229,9 @@ Tolerance study used to investigate:
 
 This study reinforced the importance of repeatable reference geometry and controlled interface design.
 
-## Current Direction
+## Publicly Documented Direction
 
-The current architecture is the result of several parallel development paths:
+The currently published architecture is the result of several parallel development paths:
 
 ```text
 Body Architecture
@@ -266,3 +269,34 @@ B2-IF01
 Tolerance Analysis
   ↓
 Current Datum / Seating / Clamping Architecture
+```
+
+---
+
+## Naming Going Forward
+
+Future revisions should use more consistent subsystem-based identifiers where practical.
+
+Possible naming conventions include:
+
+- `BODY-Rxx`
+- `BACKIF-Rxx`
+- `VF-Rxx`
+- `VFOPT-Rxx`
+- `LENSIF-Rxx`
+- `TOL-Rxx`
+
+Historical identifiers will not be renamed retroactively.
+
+Instead, future public documents may reference both the historical identifier and a newer structured naming system when necessary.
+
+---
+
+## Related Documents
+
+- [Project Evolution — September 2026](2026-09-project-evolution.md)
+- [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [Development Log Overview](README.md)
+- [System Architecture Overview](../architecture/system-overview.md)
+- [Current Project State](../overview/current-state.md)
+- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
