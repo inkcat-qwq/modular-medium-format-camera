@@ -37,9 +37,10 @@ Current work includes:
 
 - system architecture
 - mechanical interface development
-- optical viewfinder design
+- optical viewfinder and frameline development
 - tolerance analysis
 - modular body structure
+- electronics / control architecture
 
 No design is currently considered production-ready or manufacturing-frozen.
 
@@ -49,6 +50,7 @@ Start here:
 
 - [Current Project State](docs/overview/current-state.md)
 - [System Architecture Overview](docs/architecture/system-overview.md)
+- [Electronics & Control Architecture](docs/architecture/electronics-control-overview.md)
 
 ### Design Decisions
 
@@ -58,6 +60,7 @@ Start here:
 ### Development History
 
 - [BODY2_REV05 — Architecture Integration](docs/development-log/body2-rev05-architecture-integration.md)
+- [VF13_FRAME_ARCH01 — Frameline Architecture Study](docs/development-log/vf13-frameline-architecture.md)
 - [Development Log](docs/development-log/README.md)
 - [Project Evolution — September 2026](docs/development-log/2026-09-project-evolution.md)
 - [Revision History](docs/development-log/revision-history.md)
