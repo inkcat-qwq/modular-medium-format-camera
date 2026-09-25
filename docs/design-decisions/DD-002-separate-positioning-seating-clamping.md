@@ -160,3 +160,5 @@ This decision should be reconsidered if physical prototype testing shows that:
 - [DD-001 — Modular Camera Platform Architecture](DD-001-modular-platform-architecture.md)
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Current Project State](../overview/current-state.md)
+- [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
+- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
