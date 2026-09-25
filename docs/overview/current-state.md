@@ -44,17 +44,16 @@ Physical interface geometry has not yet been fully validated.
 
 **Status:** CANDIDATE / SIMULATION
 
-A direct optical viewfinder architecture is the primary publicly documented development direction.
+A direct optical viewfinder architecture remains the primary publicly documented viewing direction.
 
-Current work focuses on:
+Current work now includes two distinct layers:
 
-- field of view
-- magnification
-- eye position tolerance
-- corner visibility
-- optical packaging
+- the retained direct-view optical finder
+- a staged frameline / cue architecture study
 
-The optical system has not yet been physically bench-tested.
+A fixed optical frameline path has been retained for independent principle validation, while dynamic correction and more complex electronic framing remain later-stage options.
+
+The combined finder and frameline system has not yet been physically bench-validated.
 
 ### Tolerance Analysis
 
@@ -64,23 +63,38 @@ Tolerance studies are being used to evaluate mechanical alignment and repeatabil
 
 ### Electronics / System Control
 
-**Status:** EARLY SYSTEM DEVELOPMENT
+**Status:** ARCHITECTURE / SOFTWARE SIMULATION
 
-Early system-level work is defining power, I/O, user-interface, and subsystem-interface responsibilities. Detailed implementation remains secondary to the current mechanical and optical validation work.
+Control, communication, power, I/O, user-interface, and interface-control studies have now been developed as coordinated system-level architecture tracks.
+
+Executable software models are being used to evaluate states, degraded modes, power behavior, interconnect responsibilities, and user flows.
+
+No PCB, connector, bus standard, battery system, or digital-back protocol is frozen, and no system electronics have yet been physically validated.
 
 ## Major Open Questions
 
 - final rear-interface geometry
 - locking and clamping mechanism
 - manufacturing repeatability
-- optical eye-box performance
+- direct-view and frameline physical eye-box performance
+- real frameline / combiner optical behavior
 - final front-module architecture
+- digital-back synchronization and electrical boundary
+- real power, contact, and harness behavior
 - environmental sealing
 - physical prototype validation
 
 ## Next Development Gate
 
 The next major goal is to move selected simulated subsystems toward physical interface and bench validation.
+
+Priority validation areas include:
+
+- digital-back mechanical and synchronization evidence
+- direct-view finder and fixed-frameline bench testing
+- real eye-position and packaging checks
+- front-module / closure physical validation
+- real power, contact, and interconnect tests
 
 ---
 
@@ -92,6 +106,8 @@ Values and architectures described throughout the repository should not be consi
 ## Related Documents
 
 - [System Architecture Overview](../architecture/system-overview.md)
+- [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
+- [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
 - [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
 - [Revision History](../development-log/revision-history.md)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
