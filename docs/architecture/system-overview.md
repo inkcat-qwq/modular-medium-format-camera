@@ -16,6 +16,25 @@ The architecture is still under development and should not be treated as a manuf
 
 The current camera concept is divided into several major subsystems:
 
+## System Diagram
+
+```mermaid
+flowchart LR
+    L[Lens / Front Module]
+    C[Central Structural Core]
+    B[Digital Back Adapter]
+    D[Digital Back]
+    V[Direct Optical Viewfinder]
+    E[Future Electronics]
+
+    L --> C
+    C --> B
+    B --> D
+
+    C --> V
+    C --> E
+```
+
 1. Central structural core
 2. Rear digital-back interface
 3. Front / lens module interface
