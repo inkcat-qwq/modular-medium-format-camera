@@ -1,6 +1,6 @@
 # DD-001 — Modular Camera Platform Architecture
 
-> **Decision status:** ACCEPTED — Current architectural direction  
+> **Decision status:** ACCEPTED — Retained architectural principle  
 > **Validation status:** PRE-PROTOTYPE  
 > **Date:** September 2026
 
