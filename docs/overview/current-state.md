@@ -3,7 +3,9 @@
 > **Status:** Pre-prototype / Simulation  
 > Last updated: September 2026
 
-This document provides a high-level snapshot of the current development state of the Modular Medium Format Camera project.
+This document provides a high-level snapshot of the currently published development state of the Modular Medium Format Camera project.
+
+> **Public documentation note:** Private internal development may be ahead of the milestones described here.
 
 ## System Architecture
 
@@ -42,7 +44,7 @@ Physical interface geometry has not yet been fully validated.
 
 **Status:** CANDIDATE / SIMULATION
 
-A direct optical viewfinder architecture is currently the primary development direction.
+A direct optical viewfinder architecture is the primary publicly documented development direction.
 
 Current work focuses on:
 
@@ -59,6 +61,12 @@ The optical system has not yet been physically bench-tested.
 **Status:** SIMULATION
 
 Tolerance studies are being used to evaluate mechanical alignment and repeatability before physical prototype manufacturing.
+
+### Electronics / System Control
+
+**Status:** EARLY SYSTEM DEVELOPMENT
+
+Early system-level work is defining power, I/O, user-interface, and subsystem-interface responsibilities. Detailed implementation remains secondary to the current mechanical and optical validation work.
 
 ## Major Open Questions
 
@@ -79,3 +87,11 @@ The next major goal is to move selected simulated subsystems toward physical int
 This document describes the current development state only.
 
 Values and architectures described throughout the repository should not be considered manufacturing specifications unless explicitly marked `FROZEN` or `VALIDATED`.
+
+
+## Related Documents
+
+- [System Architecture Overview](../architecture/system-overview.md)
+- [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
+- [Revision History](../development-log/revision-history.md)
+- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
