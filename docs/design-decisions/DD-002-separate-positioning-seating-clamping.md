@@ -1,6 +1,6 @@
 # DD-002 — Separate Positioning, Seating, and Clamping Functions
 
-> **Decision status:** ACCEPTED — Current mechanical design principle  
+> **Decision status:** ACCEPTED — Retained mechanical design principle  
 > **Validation status:** SIMULATION  
 > **Date:** September 2026
 
