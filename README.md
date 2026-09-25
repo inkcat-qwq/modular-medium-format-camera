@@ -5,7 +5,8 @@ An experimental modular medium-format digital camera platform exploring and docu
 ![Modular Medium Format Camera — current architecture overview](images/renders/hero-overview.png)
 
 > **Project status:** Pre-prototype / Simulation  
-> This project is under active development. Current dimensions, architectures, and design decisions are not manufacturing-ready specifications.
+> This project is under active development. Current dimensions, architectures, and design decisions are not manufacturing-ready specifications.  
+> **Public scope:** This repository contains curated public development records and may intentionally lag behind private internal development.
 
 ## Overview
 
@@ -18,7 +19,7 @@ The project explores:
 - direct optical viewfinder systems
 - structural datum and alignment architectures
 - mechanical tolerance and repeatability
-- future electronic integration
+- early electronic system integration
 
 The project is currently focused on architecture development, simulation, and interface validation.
 
@@ -75,8 +76,14 @@ modular-medium-format-camera/
 │   ├── history/
 │   └── renders/
 │
+├── .gitignore
+├── PUBLIC_RELEASE_POLICY.md
 └── README.md
 ```
+
+## Release Policy
+
+See [Public Release Policy](PUBLIC_RELEASE_POLICY.md) for the repository's public/private release boundaries and review rules.
 
 ## Licensing
 
