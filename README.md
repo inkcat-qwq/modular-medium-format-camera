@@ -31,7 +31,7 @@ The intention is to preserve the complete development history from early concept
 
 ## Current Stage
 
-**Phase: Simulation / Pre-prototype**
+**Phase: Pre-prototype / Simulation**
 
 Current work includes:
 
