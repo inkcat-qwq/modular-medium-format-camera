@@ -52,4 +52,10 @@ Start here:
 - [DD-001 — Modular Camera Platform Architecture](docs/design-decisions/DD-001-modular-platform-architecture.md)
 - [DD-002 — Separate Positioning, Seating, and Clamping Functions](docs/design-decisions/DD-002-separate-positioning-seating-clamping.md)
 
+### Development History
+
+- [Development Log](docs/development-log/README.md)
+- [Project Evolution — September 2026](docs/development-log/2026-09-project-evolution.md)
+- [Revision History](docs/development-log/revision-history.md)
+
 ## Repository Structure
