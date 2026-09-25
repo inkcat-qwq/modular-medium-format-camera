@@ -13,6 +13,14 @@ It is not a manufacturing release and should not be interpreted as a finalized c
 
 ---
 
+## Architecture Evolution
+
+The comparison below illustrates the architectural transition from an earlier body revision to the BODY2_REV05 integration candidate.
+
+![Rev03 to BODY2_REV05 architecture comparison](../../images/history/rev03-rev05-comparison.png)
+
+*Architectural comparison between an earlier body revision and the BODY2_REV05 integration candidate. The image is intended to illustrate system evolution rather than manufacturing geometry.*
+
 ## Objective
 
 The purpose of this revision was to evaluate whether the major camera subsystems could coexist within a single coherent structural architecture.
