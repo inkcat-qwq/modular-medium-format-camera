@@ -198,3 +198,14 @@ The architecture may continue to change as physical test results become availabl
 The project intentionally preserves rejected designs and failed experiments.
 
 The development history is considered part of the engineering output because unsuccessful concepts document constraints that may otherwise need to be rediscovered later.
+
+
+---
+
+## Related Documents
+
+- [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [Revision History](revision-history.md)
+- [System Architecture Overview](../architecture/system-overview.md)
+- [Current Project State](../overview/current-state.md)
+- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
