@@ -2,46 +2,47 @@
 # Public repository allowlist
 # Modular Medium Format Camera
 #
-# This repository currently publishes documentation and
-# curated visual material only.
+# This repository publishes curated documentation and selected
+# visual material only. Everything else is ignored by default.
 #
-# Engineering source files, CAD, simulation data, parameter
-# files, archives, and generated artifacts are ignored by
-# default unless deliberately released later.
+# Adding a new public directory or file type should be a
+# deliberate release-policy decision.
 # ============================================================
 
-
-# Ignore everything by default
+# Ignore everything by default.
 *
 
+# Repository control and root public documents.
+!/.gitignore
+!/README.md
+!/PUBLIC_RELEASE_POLICY.md
+!/LICENSE
+!/LICENSE.*
 
-# Allow directory traversal so permitted files can be included
-!*/
+# Curated documentation directories.
+!/docs/
+!/docs/architecture/
+!/docs/architecture/*.md
+!/docs/design-decisions/
+!/docs/design-decisions/*.md
+!/docs/development-log/
+!/docs/development-log/*.md
+!/docs/overview/
+!/docs/overview/*.md
 
+# Curated public image directories.
+!/images/
+!/images/history/
+!/images/history/*.png
+!/images/history/*.jpg
+!/images/history/*.jpeg
+!/images/history/*.svg
+!/images/history/*.webp
+!/images/renders/
+!/images/renders/*.png
+!/images/renders/*.jpg
+!/images/renders/*.jpeg
+!/images/renders/*.svg
+!/images/renders/*.webp
 
-# ------------------------------------------------------------
-# Public documentation
-# ------------------------------------------------------------
-
-!*.md
-
-
-# ------------------------------------------------------------
-# Curated public images
-# ------------------------------------------------------------
-
-!*.png
-!*.jpg
-!*.jpeg
-!*.svg
-!*.webp
-
-
-# ------------------------------------------------------------
-# Repository control files
-# ------------------------------------------------------------
-
-!.gitignore
-
-!LICENSE
-!LICENSE.*
+# Everything not explicitly allowed above remains ignored.
