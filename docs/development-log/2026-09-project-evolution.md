@@ -171,7 +171,21 @@ Dynamic correction remains a later option rather than a prerequisite for the dir
 
 ---
 
-## 10. Electronics and System-Control Development
+## 10. Front-Module Closure Study
+
+Front-module development progressed from interface and packaging concepts toward an integrated closure candidate.
+
+The study combined holding, retention, preload, safety, service, and lens-envelope concerns into one mechanical review.
+
+The result remained on **HOLD**.
+
+Several CAD-level and assembly-level issues were still unresolved, and the project intentionally stopped further parameter tuning rather than treating the remaining work as “only physical testing.”
+
+The next useful inputs are real lens geometry, physical clamp / safety evidence, and measured or supplier-backed mechanical behavior.
+
+---
+
+## 11. Electronics and System-Control Development
 
 Electronics developed from a future placeholder into a parallel architecture track.
 
@@ -189,13 +203,14 @@ No PCB, connector system, battery architecture, digital-back protocol, or produc
 
 ---
 
-## 11. Current Architecture
+## 12. Current Architecture
 
 The currently published project architecture consists of:
 
 - a central structural core
 - a modular rear digital-back interface
 - interchangeable front / lens modules
+- front-module closure and retention architecture currently on HOLD
 - an integrated direct optical viewfinder
 - defined positioning and seating architecture
 - a staged frameline / cue subsystem
@@ -211,7 +226,7 @@ No complete physical camera prototype has yet validated the system.
 
 ---
 
-## 12. Current Development Direction
+## 13. Current Development Direction
 
 The next major transition is from architecture and simulation toward selective physical validation.
 
@@ -242,6 +257,7 @@ The development history is considered part of the engineering output because uns
 ## Related Documents
 
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [Revision History](revision-history.md)
