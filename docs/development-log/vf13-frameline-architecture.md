@@ -23,6 +23,10 @@ The main architecture families considered were:
 
 The goal was to identify the lowest-complexity path suitable for independent principle validation before any camera-body packaging is frozen.
 
+![VF13 comparison of fixed framelines, movable reticles, and local electronic overlays](../../images/history/vf13-frameline-architectures.png)
+
+*Conceptual VF13 architectures: fixed framelines with symbolic cues (FA), movable reticles (FB), and local electronic overlays (FC); assumed projection boundaries, not a validated optical design.*
+
 ---
 
 ## Retained Direction

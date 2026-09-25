@@ -64,7 +64,7 @@ Important examples included:
 - service and removal paths that remained incomplete
 - interference between inherited references and the integrated mechanism
 - lens-envelope conflicts for some larger or differently controlled lenses
-- continued risk of front-module geometry intruding into the direct-view optical field
+- unresolved overlaps between studied lens envelopes and sampled direct-view optical-field rays
 
 Because these were still digital-design problems, it would have been misleading to describe the remaining work as “only physical testing.”
 
@@ -105,6 +105,8 @@ The integrated candidate was reviewed through:
 - reopen and package-validation checks
 
 The study intentionally retained failed checks and conflicting cases as evidence.
+
+Interference and motion checks covered selected component pairs and discrete poses. They did not establish full-system continuous-motion clearance, and a result with no detected solid overlap does not establish a minimum clearance.
 
 This validation level does **not** demonstrate:
 
