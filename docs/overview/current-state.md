@@ -27,6 +27,16 @@ The current architecture remains experimental and has not been frozen for manufa
 
 The current body architecture is being evaluated for structural layout, module integration, and interface repeatability.
 
+### Front Module / Closure
+
+**Status:** HOLD / DEVELOPMENT STUDY
+
+Front-module architecture has progressed through integrated closure, retention, preload, safety, and lens-envelope studies.
+
+The latest published integration study did not achieve digital closure. Several mechanical and service-path conflicts remain unresolved, so the front-module mechanism is intentionally held before any release or body-revision promotion.
+
+Further progress requires targeted physical or supplier-backed evidence rather than additional parameter tuning alone.
+
 ### Digital Back Interface
 
 **Status:** CANDIDATE / SIMULATION
@@ -78,7 +88,7 @@ No PCB, connector, bus standard, battery system, or digital-back protocol is fro
 - manufacturing repeatability
 - direct-view and frameline physical eye-box performance
 - real frameline / combiner optical behavior
-- final front-module architecture
+- front-module closure, retention, and real-lens compatibility
 - digital-back synchronization and electrical boundary
 - real power, contact, and harness behavior
 - environmental sealing
@@ -109,5 +119,6 @@ Values and architectures described throughout the repository should not be consi
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
 - [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
+- [FM2_CLOSURE03 — Digital Closure Review](../development-log/fm2-closure03-digital-closure-review.md)
 - [Revision History](../development-log/revision-history.md)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
