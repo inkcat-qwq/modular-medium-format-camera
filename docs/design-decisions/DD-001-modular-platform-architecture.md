@@ -25,7 +25,7 @@ The system will be divided into several major subsystems:
 - front / lens module
 - optical viewfinder system
 - mechanical datum and clamping system
-- future electronics
+- electronics / system control
 
 Each major subsystem should, where practical, have a clearly defined interface with the central camera structure.
 
@@ -39,7 +39,7 @@ The modular architecture is intended to support:
 - interchangeable front or lens modules
 - independent development of the optical viewfinder
 - easier mechanical experimentation
-- future electronic expansion
+- electronic system expansion
 - subsystem replacement without complete body redesign
 - clearer tolerance and interface analysis
 - preservation of experimental flexibility
@@ -145,3 +145,4 @@ This decision should be reconsidered if:
 
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Current Project State](../overview/current-state.md)
+- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
