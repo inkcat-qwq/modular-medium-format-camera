@@ -25,7 +25,7 @@ flowchart LR
     B[Digital Back Adapter]
     D[Digital Back]
     V[Direct Optical Viewfinder]
-    E[Future Electronics]
+    E[Electronics / Control]
 
     L --> C
     C --> B
@@ -40,7 +40,7 @@ flowchart LR
 3. Front / lens module interface
 4. Optical viewfinder system
 5. Mechanical datum and clamping architecture
-6. Future electronic control subsystem
+6. Electronics / control subsystem
 
 Each subsystem is intended to have a clearly defined mechanical and functional interface.
 
@@ -129,9 +129,9 @@ Tolerance simulations are currently being used to evaluate the effectiveness of 
 
 **Status:** EARLY SYSTEM DEVELOPMENT
 
-Electronics are not currently the primary development focus.
+Electronics are not currently the primary development focus. Early system-level work has begun around power, I/O, user-interface, and subsystem-interface definition, while implementation remains secondary to mechanical and optical validation.
 
-Potential future functions include:
+Potential functions include:
 
 - shutter control
 - digital-back communication
@@ -140,7 +140,7 @@ Potential future functions include:
 - viewfinder information
 - accessory interfaces
 
-The current mechanical architecture is being developed so that future electronic systems can be added without requiring a complete redesign of the camera platform.
+The mechanical architecture is being developed so that electronic systems can evolve without requiring a complete redesign of the camera platform.
 
 ## Architecture Principles
 
@@ -169,5 +169,9 @@ It has not yet been validated as a complete physical camera system.
 ## Related Documents
 
 - [Current Project State](../overview/current-state.md)
+- [DD-001 — Modular Camera Platform Architecture](../design-decisions/DD-001-modular-platform-architecture.md)
+- [DD-002 — Separate Positioning, Seating, and Clamping Functions](../design-decisions/DD-002-separate-positioning-seating-clamping.md)
+- [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
+- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
 
-Future documents will cover individual subsystems in greater detail.
+Future public documents may cover individual subsystems in greater detail as they are reviewed for release.
