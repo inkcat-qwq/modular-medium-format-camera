@@ -56,6 +56,7 @@ Start here:
 
 ### Development History
 
+- [BODY2_REV05 — Architecture Integration](docs/development-log/body2-rev05-architecture-integration.md)
 - [Development Log](docs/development-log/README.md)
 - [Project Evolution — September 2026](docs/development-log/2026-09-project-evolution.md)
 - [Revision History](docs/development-log/revision-history.md)
