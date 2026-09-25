@@ -1,6 +1,6 @@
 # Modular Medium Format Camera
 
-An experimental modular medium-format digital camera platform exploring mechanical, optical, interface, and system-level camera design.
+An experimental modular medium-format digital camera platform exploring and documenting mechanical, optical, interface, and system-level design.
 
 ![Modular Medium Format Camera — current architecture overview](images/renders/hero-overview.png)
 
