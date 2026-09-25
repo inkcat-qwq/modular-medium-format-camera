@@ -62,3 +62,24 @@ Start here:
 - [Revision History](docs/development-log/revision-history.md)
 
 ## Repository Structure
+
+```text
+modular-medium-format-camera/
+├── docs/
+│   ├── architecture/
+│   ├── design-decisions/
+│   ├── development-log/
+│   └── overview/
+│
+├── images/
+│   ├── history/
+│   └── renders/
+│
+└── README.md
+```
+
+## Licensing
+
+No license is currently granted for the design files or engineering documentation in this repository.
+
+Licensing and possible future open-hardware release terms remain under consideration.
