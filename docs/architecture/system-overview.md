@@ -25,6 +25,7 @@ flowchart LR
     B[Digital Back Adapter]
     D[Digital Back]
     V[Direct Optical Viewfinder]
+    F[Frameline / Cue Subsystem]
     E[Electronics / Control]
 
     L --- C
@@ -32,6 +33,7 @@ flowchart LR
     B --- D
 
     C --- V
+    V --- F
     C --- E
 ```
 
@@ -39,8 +41,9 @@ flowchart LR
 2. Rear digital-back interface
 3. Front / lens module interface
 4. Optical viewfinder system
-5. Mechanical datum and clamping architecture
-6. Electronics / control subsystem
+5. Frameline / cue subsystem
+6. Mechanical datum and clamping architecture
+7. Electronics / control subsystem
 
 Each subsystem is intended to have a clearly defined mechanical and functional interface.
 
@@ -109,6 +112,20 @@ Several optical configurations have been evaluated, including rejected and retai
 
 Physical optical bench validation has not yet been completed.
 
+## Frameline / Cue Subsystem
+
+**Status:** PRINCIPLE-VALIDATION CANDIDATE / SIMULATION
+
+A staged framing-information architecture is now being studied alongside the retained direct-view finder.
+
+The publicly retained direction prioritizes:
+
+- fixed optical framelines for first principle validation
+- optional small cue information as a later supplement
+- dynamic or profile-selectable correction only if later validation justifies the added complexity
+
+No module envelope, optical window, actuator, connector, or camera-body cutout is frozen.
+
 ## Mechanical Datum Architecture
 
 **Status:** CANDIDATE / SIMULATION
@@ -127,9 +144,9 @@ Tolerance simulations are currently being used to evaluate the effectiveness of 
 
 ## Electronics
 
-**Status:** EARLY SYSTEM DEVELOPMENT
+**Status:** ARCHITECTURE / SOFTWARE SIMULATION
 
-Electronics are not currently the primary development focus. Early system-level work has begun around power, I/O, user-interface, and subsystem-interface definition, while implementation remains secondary to mechanical and optical validation.
+Electronics are now a defined parallel architecture track. System-level work covers control, communication, power, I/O, user-interface, and interface-control responsibilities, while physical implementation remains secondary to mechanical and optical validation.
 
 Potential functions include:
 
@@ -139,6 +156,10 @@ Potential functions include:
 - power management
 - viewfinder information
 - accessory interfaces
+
+Executable software models are currently used to evaluate control states, degraded behavior, power architecture, user flows, and interface responsibilities.
+
+No PCB, connector, bus standard, battery system, or digital-back protocol is frozen.
 
 The mechanical architecture is being developed so that electronic systems can evolve without requiring a complete redesign of the camera platform.
 
@@ -169,6 +190,8 @@ It has not yet been validated as a complete physical camera system.
 ## Related Documents
 
 - [Current Project State](../overview/current-state.md)
+- [Electronics & Control Architecture](electronics-control-overview.md)
+- [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
 - [DD-001 — Modular Camera Platform Architecture](../design-decisions/DD-001-modular-platform-architecture.md)
 - [DD-002 — Separate Positioning, Seating, and Clamping Functions](../design-decisions/DD-002-separate-positioning-seating-clamping.md)
 - [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
