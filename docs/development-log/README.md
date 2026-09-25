@@ -13,6 +13,9 @@ Public documentation may intentionally lag behind private internal development. 
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)  
   Public architecture-integration review covering the transition toward the current structural, viewfinder, and rear-interface direction.
 
+- [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)  
+  Sanitized public summary of the fixed-brightline, cue, and later dynamic-frameline architecture study.
+
 - [Project Evolution — September 2026](2026-09-project-evolution.md)  
   Narrative overview of how the project evolved from early concepts to the current architecture.
 
@@ -100,6 +103,8 @@ The project is currently in the:
 stage.
 
 The immediate objective is to move selected subsystem concepts toward physical validation while continuing architecture and simulation work.
+
+Current publicly documented parallel tracks now include frameline principle validation and system-level electronics / control architecture.
 
 ## Philosophy
 
