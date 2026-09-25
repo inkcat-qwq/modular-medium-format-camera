@@ -244,6 +244,21 @@ This study reinforced the importance of repeatable reference geometry and contro
 
 ---
 
+## Front-Module Closure Development
+
+### FM2_CLOSURE03
+
+**Area:** Front-module closure / retention integration  
+**Status:** HOLD
+
+Integrated holding, retention, preload, safety, service, and lens-envelope concepts into a single digital candidate.
+
+The study intentionally stopped without release after unresolved CAD-level conflicts, service-path issues, and lens-envelope risks remained.
+
+Its engineering value is the explicit failure-to-close result rather than a completed front-module design.
+
+---
+
 ## Electronics and System Integration
 
 ### SYS_ELEC01
@@ -339,6 +354,17 @@ Tolerance Analysis
 Current Datum / Seating / Clamping Architecture
 
 
+Front-Module Development
+
+Early Front-Module Concepts
+  ↓
+Integrated Closure Studies
+  ↓
+FM2_CLOSURE03
+  ↓
+HOLD — New Physical Evidence Required
+
+
 System Electronics / Interface Development
 
 SYS_ELEC01
@@ -375,6 +401,7 @@ Instead, future public documents may reference both the historical identifier an
 
 - [Project Evolution — September 2026](2026-09-project-evolution.md)
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [Development Log Overview](README.md)
