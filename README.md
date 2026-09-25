@@ -40,15 +40,16 @@ Current work includes:
 
 No design is currently considered production-ready or manufacturing-frozen.
 
+## Documentation
+
+Start here:
+
+- [Current Project State](docs/overview/current-state.md)
+- [System Architecture Overview](docs/architecture/system-overview.md)
+
+### Design Decisions
+
+- [DD-001 — Modular Camera Platform Architecture](docs/design-decisions/DD-001-modular-platform-architecture.md)
+- [DD-002 — Separate Positioning, Seating, and Clamping Functions](docs/design-decisions/DD-002-separate-positioning-seating-clamping.md)
+
 ## Repository Structure
-
-Planned repository structure:
-
-```text
-docs/          Engineering documentation
-cad/           Released CAD and reference geometry
-optics/        Optical design documentation
-simulation/    Simulation data and results
-drawings/      Interface and engineering drawings
-images/        Renders, diagrams, and prototype images
-archive/       Historical and superseded material
