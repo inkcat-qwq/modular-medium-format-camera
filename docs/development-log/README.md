@@ -13,6 +13,9 @@ Public documentation may intentionally lag behind private internal development. 
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)  
   Public architecture-integration review covering the transition toward the current structural, viewfinder, and rear-interface direction.
 
+- [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)  
+  Sanitized review of a front-module integration candidate that intentionally remained on HOLD after unresolved CAD- and architecture-level conflicts were found.
+
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)  
   Sanitized public summary of the fixed-brightline, cue, and later dynamic-frameline architecture study.
 
