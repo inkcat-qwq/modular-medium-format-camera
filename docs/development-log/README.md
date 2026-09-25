@@ -8,6 +8,9 @@ These records are not intended to represent manufacturing specifications.
 
 ## Documents
 
+- [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)  
+  Public architecture-integration review covering the transition toward the current structural, viewfinder, and rear-interface direction.
+
 - [Project Evolution — September 2026](2026-09-project-evolution.md)  
   Narrative overview of how the project evolved from early concepts to the current architecture.
 
