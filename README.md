@@ -2,6 +2,8 @@
 
 An experimental modular medium-format digital camera platform exploring mechanical, optical, interface, and system-level camera design.
 
+![Modular Medium Format Camera — current architecture overview](images/renders/hero-overview.png)
+
 > **Project status:** Pre-prototype / Simulation  
 > This project is under active development. Current dimensions, architectures, and design decisions are not manufacturing-ready specifications.
 
