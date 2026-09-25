@@ -1,0 +1,47 @@
+# ============================================================
+# Public repository allowlist
+# Modular Medium Format Camera
+#
+# This repository currently publishes documentation and
+# curated visual material only.
+#
+# Engineering source files, CAD, simulation data, parameter
+# files, archives, and generated artifacts are ignored by
+# default unless deliberately released later.
+# ============================================================
+
+
+# Ignore everything by default
+*
+
+
+# Allow directory traversal so permitted files can be included
+!*/
+
+
+# ------------------------------------------------------------
+# Public documentation
+# ------------------------------------------------------------
+
+!*.md
+
+
+# ------------------------------------------------------------
+# Curated public images
+# ------------------------------------------------------------
+
+!*.png
+!*.jpg
+!*.jpeg
+!*.svg
+!*.webp
+
+
+# ------------------------------------------------------------
+# Repository control files
+# ------------------------------------------------------------
+
+!.gitignore
+
+!LICENSE
+!LICENSE.*
