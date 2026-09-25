@@ -127,7 +127,7 @@ Tolerance simulations are currently being used to evaluate the effectiveness of 
 
 ## Electronics
 
-**Status:** FUTURE DEVELOPMENT
+**Status:** EARLY SYSTEM DEVELOPMENT
 
 Electronics are not currently the primary development focus.
 
