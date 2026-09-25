@@ -155,7 +155,41 @@ These studies reinforced the need for clearly defined mechanical datums and inde
 
 ---
 
-## 9. Current Architecture
+## 9. Frameline Architecture Study
+
+After the direct-view finder direction stabilized enough for system integration, development expanded to framing information.
+
+The study compared:
+
+- fixed optical framelines
+- later movable or profile-selectable framelines
+- small electronic cue regions
+
+The retained public direction favors a fixed optical brightline as the first independent principle-validation step.
+
+Dynamic correction remains a later option rather than a prerequisite for the direct-view finder.
+
+---
+
+## 10. Electronics and System-Control Development
+
+Electronics developed from a future placeholder into a parallel architecture track.
+
+Separate studies now address:
+
+- body control and communication responsibilities
+- power and protection behavior
+- modular interconnect responsibilities
+- user interaction
+- system-level interface control and traceability
+
+These studies currently rely on executable software models and interface documents rather than released hardware.
+
+No PCB, connector system, battery architecture, digital-back protocol, or production control layout has been frozen.
+
+---
+
+## 11. Current Architecture
 
 The currently published project architecture consists of:
 
@@ -164,7 +198,8 @@ The currently published project architecture consists of:
 - interchangeable front / lens modules
 - an integrated direct optical viewfinder
 - defined positioning and seating architecture
-- provision for evolving electronic systems
+- a staged frameline / cue subsystem
+- coordinated electronics / control architecture
 
 The project remains in the:
 
@@ -176,7 +211,7 @@ No complete physical camera prototype has yet validated the system.
 
 ---
 
-## 10. Current Development Direction
+## 12. Current Development Direction
 
 The next major transition is from architecture and simulation toward selective physical validation.
 
@@ -184,7 +219,9 @@ Important future validation work includes:
 
 - mechanical datum testing
 - rear-interface repeatability testing
-- optical bench validation
+- direct-view finder and fixed-frameline bench validation
+- real digital-back synchronization evidence
+- real power, contact, and interconnect testing
 - module removal and reinstallation testing
 - structural prototype evaluation
 - eventual imaging tests
@@ -205,6 +242,8 @@ The development history is considered part of the engineering output because uns
 ## Related Documents
 
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
+- [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [Revision History](revision-history.md)
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Current Project State](../overview/current-state.md)
