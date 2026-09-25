@@ -212,3 +212,15 @@ Its primary value is that the major camera subsystems can now be evaluated as pa
 The revision should continue into targeted physical validation rather than further cosmetic refinement.
 
 Future changes should be driven by measured mechanical, optical, and ergonomic evidence.
+
+
+---
+
+## Related Documents
+
+- [Current Project State](../overview/current-state.md)
+- [System Architecture Overview](../architecture/system-overview.md)
+- [DD-001 — Modular Camera Platform Architecture](../design-decisions/DD-001-modular-platform-architecture.md)
+- [DD-002 — Separate Positioning, Seating, and Clamping Functions](../design-decisions/DD-002-separate-positioning-seating-clamping.md)
+- [Revision History](revision-history.md)
+- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
