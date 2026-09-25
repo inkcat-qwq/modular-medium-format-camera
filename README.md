@@ -40,6 +40,7 @@ Current work includes:
 - optical viewfinder and frameline development
 - tolerance analysis
 - modular body structure
+- front-module closure / retention studies
 - electronics / control architecture
 
 No design is currently considered production-ready or manufacturing-frozen.
@@ -60,6 +61,7 @@ Start here:
 ### Development History
 
 - [BODY2_REV05 — Architecture Integration](docs/development-log/body2-rev05-architecture-integration.md)
+- [FM2_CLOSURE03 — Digital Closure Review](docs/development-log/fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](docs/development-log/vf13-frameline-architecture.md)
 - [Development Log](docs/development-log/README.md)
 - [Project Evolution — September 2026](docs/development-log/2026-09-project-evolution.md)
