@@ -81,7 +81,7 @@ The final locking mechanism and physical interface geometry remain under develop
 
 ## Front / Lens Module Interface
 
-**Status:** CONCEPT / CANDIDATE
+**Status:** HOLD / DEVELOPMENT STUDY
 
 The front interface is intended to support interchangeable optical modules.
 
@@ -91,6 +91,10 @@ Possible modules may include:
 - fixed-lens modules
 - bellows-based systems
 - experimental shutter assemblies
+
+The latest integrated closure study combined retention, preload, safety, service, and lens-envelope concepts into one candidate, but did not achieve digital closure.
+
+The subsystem remains on HOLD because unresolved CAD-level conflicts, service paths, and lens-envelope questions still require new evidence.
 
 The final interface standard has not yet been selected.
 
@@ -195,6 +199,7 @@ It has not yet been validated as a complete physical camera system.
 - [DD-001 — Modular Camera Platform Architecture](../design-decisions/DD-001-modular-platform-architecture.md)
 - [DD-002 — Separate Positioning, Seating, and Clamping Functions](../design-decisions/DD-002-separate-positioning-seating-clamping.md)
 - [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
+- [FM2_CLOSURE03 — Digital Closure Review](../development-log/fm2-closure03-digital-closure-review.md)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
 
 Future public documents may cover individual subsystems in greater detail as they are reviewed for release.
