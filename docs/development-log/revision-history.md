@@ -26,6 +26,8 @@ Historical items may be described using the following states:
 - `RETAINED MILESTONE` — historically important direction retained as a basis for later work
 - `RETAINED CANDIDATE` — candidate retained within a development path
 - `ALTERNATIVE CANDIDATE` — retained comparator rather than the primary documented candidate
+- `DEVELOPMENT STUDY` — structured investigation used to define or compare subsystem architecture
+- `HOLD` — work intentionally not advanced to freeze or release pending further evidence
 
 ---
 
@@ -212,6 +214,17 @@ Alternative optical configuration retained for comparison with the primary candi
 
 ---
 
+### VF13_FRAME_ARCH01
+
+**Area:** Frameline / finder information architecture  
+**Status:** RETAINED MILESTONE
+
+Study comparing fixed optical framelines, later dynamic correction, and limited cue architectures.
+
+The publicly retained path prioritizes an independent fixed-brightline principle test while leaving dynamic correction and packaging geometry unfrozen.
+
+---
+
 ## Tolerance Development
 
 ### TOL01
@@ -228,6 +241,57 @@ Tolerance study used to investigate:
 - sensitivity of the mechanical datum architecture
 
 This study reinforced the importance of repeatable reference geometry and controlled interface design.
+
+---
+
+## Electronics and System Integration
+
+### SYS_ELEC01
+
+**Area:** Control / communication architecture  
+**Status:** DEVELOPMENT STUDY
+
+Established software-simulated control responsibilities, degraded modes, and communication boundaries without freezing hardware.
+
+---
+
+### SYS_POWER01
+
+**Area:** Power / energy architecture  
+**Status:** DEVELOPMENT STUDY
+
+Compared power, protection, and future-load scenarios without selecting a battery, rail architecture, or physical hardware.
+
+---
+
+### SYS_IO01
+
+**Area:** Interconnect / harness architecture  
+**Status:** DEVELOPMENT STUDY
+
+Defined functional interface classes and protection responsibilities while leaving connectors, pinouts, and cable construction open.
+
+---
+
+### SYS_UI01
+
+**Area:** User interaction architecture  
+**Status:** DEVELOPMENT STUDY
+
+Evaluated a compact physical-control and status model through software scenarios without freezing industrial-design geometry.
+
+---
+
+### SYS_ICD01
+
+**Area:** System interface control baseline  
+**Status:** RETAINED MILESTONE
+
+Established a coordinated system-level baseline for mechanical, optical, electrical, calibration, and ownership responsibilities.
+
+The baseline is a traceability and consistency milestone, not a design freeze; physical system verification remains open.
+
+---
 
 ## Publicly Documented Direction
 
@@ -258,6 +322,10 @@ Optical Bench Studies
 VF9_DIRECT01
   ↓
 D3 / D4 Candidate Evaluation
+  ↓
+VF13_FRAME_ARCH01
+  ↓
+Fixed-Brightline Principle Validation Candidate
 
 
 Mechanical Interface Development
@@ -269,6 +337,17 @@ B2-IF01
 Tolerance Analysis
   ↓
 Current Datum / Seating / Clamping Architecture
+
+
+System Electronics / Interface Development
+
+SYS_ELEC01
+  ↓
+SYS_POWER01 / SYS_IO01 / SYS_UI01
+  ↓
+SYS_ICD01
+  ↓
+Published System Interface Baseline
 ```
 
 ---
@@ -296,6 +375,8 @@ Instead, future public documents may reference both the historical identifier an
 
 - [Project Evolution — September 2026](2026-09-project-evolution.md)
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
+- [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [Development Log Overview](README.md)
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Current Project State](../overview/current-state.md)
