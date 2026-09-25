@@ -6,6 +6,8 @@ The purpose of the development log is to preserve major architectural changes, e
 
 These records are not intended to represent manufacturing specifications.
 
+Public documentation may intentionally lag behind private internal development. See the [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md).
+
 ## Documents
 
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)  
@@ -76,7 +78,7 @@ Development included:
 
 Several configurations were rejected due to optical or ergonomic limitations.
 
-The current direction uses an integrated direct optical viewfinder architecture.
+The currently published direction uses an integrated direct optical viewfinder architecture.
 
 ### Tolerance and Repeatability Studies
 
