@@ -6,6 +6,14 @@ The purpose of the development log is to preserve major architectural changes, e
 
 These records are not intended to represent manufacturing specifications.
 
+## Documents
+
+- [Project Evolution — September 2026](2026-09-project-evolution.md)  
+  Narrative overview of how the project evolved from early concepts to the current architecture.
+
+- [Revision History](revision-history.md)  
+  Historical index of body, interface, viewfinder, optical, and tolerance-study revision identifiers.
+
 ## Log Structure
 
 Development records may include:
