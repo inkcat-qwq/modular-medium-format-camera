@@ -3,6 +3,7 @@
 > **Document type:** Historical revision index  
 > **Status:** Living document  
 > **Last updated:** September 2026
+> > **Public documentation note:** This index describes publicly documented development milestones and may intentionally lag behind private internal development.
 
 This document records historical revision identifiers used during development of the Modular Medium Format Camera project.
 
@@ -181,20 +182,19 @@ Used to explore assembly and removal constraints within the developing camera ar
 ### VF9_DIRECT01
 
 **Area:** Optical viewfinder  
-**Status:** CURRENT ARCHITECTURAL DIRECTION
+**Status:** RETAINED DEVELOPMENT MILESTONE
 
 Major transition toward a direct-view optical finder architecture.
 
-This direction reduced dependence on more complex relay systems and became the basis of the current viewfinder development.
-
+This direction reduced dependence on more complex relay systems and became the basis for later direct-view finder development.
 ---
 
 ### D3
 
 **Area:** Direct-view optical configuration  
-**Status:** CURRENT CANDIDATE
+**Status:** RETAINED OPTICAL CANDIDATE
 
-Primary optical candidate within the current direct-view architecture.
+Primary optical candidate retained from the direct-view development path.
 
 The design remains simulation-based and has not yet been physically validated.
 
