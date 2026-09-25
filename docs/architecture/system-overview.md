@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This document describes the current high-level architecture of the Modular Medium Format Camera project.
+This document describes the currently published high-level architecture of the Modular Medium Format Camera project.
 
 The system is designed as a modular camera platform rather than a single fixed camera body. Major functional and structural subsystems are intended to remain independently replaceable where practical.
 
@@ -27,12 +27,12 @@ flowchart LR
     V[Direct Optical Viewfinder]
     E[Electronics / Control]
 
-    L --> C
-    C --> B
-    B --> D
+    L --- C
+    C --- B
+    B --- D
 
-    C --> V
-    C --> E
+    C --- V
+    C --- E
 ```
 
 1. Central structural core
