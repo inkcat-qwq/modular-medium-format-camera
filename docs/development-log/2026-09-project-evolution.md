@@ -4,7 +4,7 @@
 > **Project stage:** Simulation / Pre-prototype  
 > **Date:** September 2026
 
-This document summarizes the major architectural evolution of the Modular Medium Format Camera project up to the current development stage.
+This document summarizes the major publicly documented architectural evolution of the Modular Medium Format Camera project up to the current published stage.
 
 It is intended to preserve the reasoning and progression of the project rather than provide manufacturing specifications.
 
@@ -157,14 +157,14 @@ These studies reinforced the need for clearly defined mechanical datums and inde
 
 ## 9. Current Architecture
 
-The current project architecture consists of:
+The currently published project architecture consists of:
 
 - a central structural core
 - a modular rear digital-back interface
 - interchangeable front / lens modules
 - an integrated direct optical viewfinder
 - defined positioning and seating architecture
-- future provision for electronic systems
+- provision for evolving electronic systems
 
 The project remains in the:
 
