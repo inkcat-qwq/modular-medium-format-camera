@@ -33,12 +33,14 @@
 # Curated public image directories.
 !/images/
 !/images/history/
+!/images/history/README.md
 !/images/history/*.png
 !/images/history/*.jpg
 !/images/history/*.jpeg
 !/images/history/*.svg
 !/images/history/*.webp
 !/images/renders/
+!/images/renders/README.md
 !/images/renders/*.png
 !/images/renders/*.jpg
 !/images/renders/*.jpeg
