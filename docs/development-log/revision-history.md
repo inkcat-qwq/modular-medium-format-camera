@@ -214,6 +214,39 @@ Alternative optical configuration retained for comparison with the primary candi
 
 ---
 
+### VF10_D3_ENGINEERING01
+
+**Area:** Direct-view finder engineering / HUD integration boundary  
+**Status:** RETAINED MILESTONE
+
+Deeper engineering review retained the D3 direct-view scene path while explicitly deferring HUD integration.
+
+The milestone separated direct-view optical viability from optional information-overlay packaging.
+
+---
+
+### VF11_HUD_PACK01
+
+**Area:** Independent HUD packaging  
+**Status:** HOLD / DEVELOPMENT STUDY
+
+Compared several compact HUD injection / folding architectures around the retained direct-view finder.
+
+The study found that wide field, eye-position range, injection direction, and hardware volume remained too strongly coupled for a credible released HUD envelope.
+
+---
+
+### VF12_SHARED_HUD01
+
+**Area:** Shared-aperture HUD architecture  
+**Status:** HOLD / DEVELOPMENT STUDY
+
+Tested whether sharing more of the existing finder optical path could reduce HUD packaging cost.
+
+The study demonstrated useful shared optical transfer behavior but did not produce a practical camera-level HUD package or a released body interface.
+
+---
+
 ### VF13_FRAME_ARCH01
 
 **Area:** Frameline / finder information architecture  
@@ -338,6 +371,12 @@ VF9_DIRECT01
   ↓
 D3 / D4 Candidate Evaluation
   ↓
+VF10_D3_ENGINEERING01
+  ↓
+VF11_HUD_PACK01
+  ↓
+VF12_SHARED_HUD01
+  ↓
 VF13_FRAME_ARCH01
   ↓
 Fixed-Brightline Principle Validation Candidate
@@ -403,6 +442,7 @@ Instead, future public documents may reference both the historical identifier an
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
 - [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
+- [Viewfinder, HUD, and Frameline Evolution](viewfinder-hud-frameline-evolution.md)
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [Development Log Overview](README.md)
 - [System Architecture Overview](../architecture/system-overview.md)
