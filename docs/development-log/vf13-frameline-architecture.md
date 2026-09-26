@@ -143,5 +143,6 @@ Only after that experiment should more complex dynamic frameline mechanisms be r
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Current Project State](../overview/current-state.md)
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [Viewfinder, HUD, and Frameline Evolution](viewfinder-hud-frameline-evolution.md)
 - [Revision History](revision-history.md)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
