@@ -143,15 +143,19 @@ The current optical design remains a simulation candidate and has not yet been p
 
 As the mechanical architecture became more mature, tolerance analysis became increasingly important.
 
-Simulation began to focus on questions such as:
+BODY2_TOL01 introduced a reproducible assumed-input Monte Carlo and analytical error-chain study spanning the removable front module, structural core, rear adapter, and digital-back interface.
 
-- How accurately does a module return after removal?
-- How sensitive is alignment to manufacturing variation?
-- Which reference features dominate positioning error?
-- How much can calibration improve system accuracy?
-- Does repeated assembly significantly change alignment?
+The study focused on questions such as:
 
-These studies reinforced the need for clearly defined mechanical datums and independent clamping.
+- How sensitive is the architecture to assumed mechanical variation?
+- What can a central calibration remove, and what does it leave unresolved?
+- How much can removal and reinstallation change the mechanical state?
+- Which positioning and seating responsibilities need a clearer physical definition?
+- How strongly do the conclusions depend on assumed distributions and correlations?
+
+The study deliberately did not convert simulated percentiles into production yield or image-quality acceptance.
+
+Its most important result was to move the next step away from “tighten every tolerance” and toward measurement: define a measurable datum chain, characterize real seating and guide behavior, and replace assumed inputs with physical evidence.
 
 ---
 
@@ -258,6 +262,7 @@ The development history is considered part of the engineering output because uns
 ## Related Documents
 
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](body2-tol01-mechanical-tolerance-study.md)
 - [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
 - [Viewfinder, HUD, and Frameline Evolution](viewfinder-hud-frameline-evolution.md)
