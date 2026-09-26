@@ -260,20 +260,26 @@ The publicly retained path prioritizes an independent fixed-brightline principle
 
 ## Tolerance Development
 
-### TOL01
+### BODY2_TOL01
 
-**Area:** Mechanical tolerance analysis  
-**Status:** SIMULATION
+**Area:** Mechanical tolerance / repeatability analysis  
+**Status:** SIMULATION / SENSITIVITY STUDY
 
-Tolerance study used to investigate:
+Reproducible assumed-input Monte Carlo and analytical study of the front-module, structural-core, rear-adapter, and digital-back error chain.
 
-- alignment variation
-- assembly repeatability
-- removal and reinstallation behavior
-- effectiveness of calibration
-- sensitivity of the mechanical datum architecture
+The study examined:
 
-This study reinforced the importance of repeatable reference geometry and controlled interface design.
+- central axial variation
+- relative plane tilt
+- calibration as a conditional compensation scenario
+- removal and reinstallation effects
+- locating and seating responsibility
+- guide-clearance sensitivity
+- sensitivity to assumed distribution and correlation models
+
+The study does not establish manufacturing yield, optical focus acceptance, or a released GD&T scheme.
+
+Its main result is the identification of physical measurements and interface responsibilities required before a credible manufacturing tolerance budget can be created.
 
 ---
 
@@ -388,7 +394,9 @@ Early Interface Concepts
   ↓
 B2-IF01
   ↓
-Tolerance Analysis
+BODY2_TOL01
+  ↓
+Measured Datum / Seating Evidence Required
   ↓
 Current Datum / Seating / Clamping Architecture
 
@@ -440,6 +448,7 @@ Instead, future public documents may reference both the historical identifier an
 
 - [Project Evolution — September 2026](2026-09-project-evolution.md)
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
+- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](body2-tol01-mechanical-tolerance-study.md)
 - [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
 - [Viewfinder, HUD, and Frameline Evolution](viewfinder-hud-frameline-evolution.md)
