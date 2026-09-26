@@ -64,6 +64,7 @@ Start here:
 - [BODY2_REV05 — Architecture Integration](docs/development-log/body2-rev05-architecture-integration.md)
 - [FM2_CLOSURE03 — Digital Closure Review](docs/development-log/fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](docs/development-log/vf13-frameline-architecture.md)
+- [Viewfinder, HUD, and Frameline Evolution](docs/development-log/viewfinder-hud-frameline-evolution.md)
 - [Development Log](docs/development-log/README.md)
 - [Project Evolution — September 2026](docs/development-log/2026-09-project-evolution.md)
 - [Revision History](docs/development-log/revision-history.md)
