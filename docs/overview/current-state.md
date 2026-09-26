@@ -110,6 +110,8 @@ Priority validation areas include:
 - front-module / closure physical validation
 - real power, contact, and interconnect tests
 
+See the [Physical Validation Roadmap](physical-validation-roadmap.md) for the public evidence sequence and exit criteria.
+
 ---
 
 This document describes the current development state only.
@@ -120,6 +122,7 @@ Values and architectures described throughout the repository should not be consi
 ## Related Documents
 
 - [Subsystem Status Matrix](subsystem-status.md)
+- [Physical Validation Roadmap](physical-validation-roadmap.md)
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
