@@ -62,6 +62,7 @@ Start here:
 ### Development History
 
 - [BODY2_REV05 — Architecture Integration](docs/development-log/body2-rev05-architecture-integration.md)
+- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](docs/development-log/body2-tol01-mechanical-tolerance-study.md)
 - [FM2_CLOSURE03 — Digital Closure Review](docs/development-log/fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](docs/development-log/vf13-frameline-architecture.md)
 - [Viewfinder, HUD, and Frameline Evolution](docs/development-log/viewfinder-hud-frameline-evolution.md)
