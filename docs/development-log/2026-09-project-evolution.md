@@ -155,19 +155,20 @@ These studies reinforced the need for clearly defined mechanical datums and inde
 
 ---
 
-## 9. Frameline Architecture Study
+## 9. HUD Integration and Frameline Reframing
 
-After the direct-view finder direction stabilized enough for system integration, development expanded to framing information.
+After the direct-view finder direction stabilized, development explored how framing and status information could be added without sacrificing the direct optical scene.
 
-The study compared:
+The sequence became progressively more constrained:
 
-- fixed optical framelines
-- later movable or profile-selectable framelines
-- small electronic cue regions
+- **VF10_D3_ENGINEERING01** retained the D3 scene-viewing path but deferred HUD integration.
+- **VF11_HUD_PACK01** tested compact independent HUD packaging and remained on HOLD because field, eye-position, and physical-volume requirements could not be closed together.
+- **VF12_SHARED_HUD01** tested a shared-aperture approach. Optical transfer could be studied, but no credible camera-level HUD package or released body interface resulted.
+- **VF13_FRAME_ARCH01** reframed the problem around the minimum information actually required.
 
-The retained public direction favors a fixed optical brightline as the first independent principle-validation step.
+The retained public direction now favors a fixed optical brightline as the first independent principle-validation step.
 
-Dynamic correction remains a later option rather than a prerequisite for the direct-view finder.
+Small cues may be added later, while dynamic correction remains a later option rather than a prerequisite for the direct-view finder.
 
 ---
 
@@ -259,6 +260,7 @@ The development history is considered part of the engineering output because uns
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)
 - [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)
+- [Viewfinder, HUD, and Frameline Evolution](viewfinder-hud-frameline-evolution.md)
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [Revision History](revision-history.md)
 - [System Architecture Overview](../architecture/system-overview.md)
