@@ -67,9 +67,13 @@ The combined finder and frameline system has not yet been physically bench-valid
 
 ### Tolerance Analysis
 
-**Status:** SIMULATION
+**Status:** SIMULATION / SENSITIVITY STUDY
 
-Tolerance studies are being used to evaluate mechanical alignment and repeatability before physical prototype manufacturing.
+BODY2_TOL01 now provides a reproducible assumed-input Monte Carlo and analytical study of the front-module, core, rear-adapter, and digital-back error chain.
+
+The study is useful for identifying sensitive interface responsibilities, calibration limits, seating assumptions, and removal / reinstallation effects.
+
+It does not provide real manufacturing yield, a released GD&T scheme, or optical focus acceptance. The next step is to replace assumed inputs with measured mechanical evidence.
 
 ### Electronics / System Control
 
@@ -120,6 +124,7 @@ Values and architectures described throughout the repository should not be consi
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
 - [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
+- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](../development-log/body2-tol01-mechanical-tolerance-study.md)
 - [FM2_CLOSURE03 — Digital Closure Review](../development-log/fm2-closure03-digital-closure-review.md)
 - [Revision History](../development-log/revision-history.md)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
