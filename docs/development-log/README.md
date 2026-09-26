@@ -19,6 +19,9 @@ Public documentation may intentionally lag behind private internal development. 
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)  
   Sanitized public summary of the fixed-brightline, cue, and later dynamic-frameline architecture study.
 
+- [Viewfinder, HUD, and Frameline Evolution](viewfinder-hud-frameline-evolution.md)  
+  Historical bridge from the retained direct-view finder through VF10 / VF11 / VF12 HUD studies and into the staged VF13 frameline direction.
+
 - [Project Evolution — September 2026](2026-09-project-evolution.md)  
   Narrative overview of how the project evolved from early concepts to the current architecture.
 
