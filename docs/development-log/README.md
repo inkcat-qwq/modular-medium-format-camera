@@ -13,6 +13,9 @@ Public documentation may intentionally lag behind private internal development. 
 - [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)  
   Public architecture-integration review covering the transition toward the current structural, viewfinder, and rear-interface direction.
 
+- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](body2-tol01-mechanical-tolerance-study.md)  
+  Sanitized summary of the assumed-input Monte Carlo and mechanical sensitivity study covering the removable front / rear interface chain.
+
 - [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)  
   Sanitized review of a front-module integration candidate that intentionally remained on HOLD after unresolved CAD- and architecture-level conflicts were found.
 
@@ -99,6 +102,8 @@ Tolerance simulation was introduced before physical manufacturing in order to ev
 - sensitivity to manufacturing variation
 
 These studies continue to inform the mechanical interface architecture.
+
+The current public tolerance milestone is BODY2_TOL01, which is explicitly a sensitivity study rather than a manufacturing-yield prediction.
 
 ### Current Phase
 
