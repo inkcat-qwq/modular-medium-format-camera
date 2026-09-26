@@ -50,6 +50,7 @@ No design is currently considered production-ready or manufacturing-frozen.
 Start here:
 
 - [Current Project State](docs/overview/current-state.md)
+- [Subsystem Status Matrix](docs/overview/subsystem-status.md)
 - [System Architecture Overview](docs/architecture/system-overview.md)
 - [Electronics & Control Architecture](docs/architecture/electronics-control-overview.md)
 
