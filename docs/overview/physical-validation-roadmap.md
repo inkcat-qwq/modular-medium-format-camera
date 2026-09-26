@@ -31,6 +31,69 @@ A successful test should close a clearly defined question. A failed test should 
 
 ---
 
+## Evidence Dependency Map
+
+The workstreams below are not required to happen strictly one after another. Several can proceed in parallel.
+
+The arrows in this diagram mean **evidence dependency**, not calendar order. A downstream gate should not be treated as credible until the upstream physical evidence it depends on exists.
+
+```mermaid
+flowchart TD
+    A[Measured digital-back geometry]
+    B[Rear datum / seating repeatability]
+    C[BODY2_TOL01 updated with measured inputs]
+
+    D[Real eye / face observations]
+    E[Fixed-brightline principle prototype]
+    F[Finder + packaging integration gate]
+
+    G[Measured real-lens envelope]
+    H[Front-module clamp / safety prototype]
+    I[Front-module physical gate]
+
+    J[Measured loads + representative contacts / harness]
+    K[Power / I/O hardware gate]
+
+    L[Observed digital-back synchronization boundary]
+    M[Synchronization interface gate]
+
+    N[SYS_ICD01 updated with measured interfaces]
+    O[Integrated body-revision candidate]
+
+    A --> B
+    B --> C
+
+    D --> F
+    E --> F
+
+    G --> H
+    H --> I
+
+    J --> K
+    L --> M
+
+    C --> N
+    F --> N
+    I --> N
+    K --> N
+    M --> N
+
+    N --> O
+```
+
+### How to read the map
+
+- **Digital-back geometry** must be measured before rear repeatability and datum-chain conclusions can become physical rather than assumed.
+- **Finder principle validation** and **real eye / face packaging evidence** are separate inputs; both are needed before claiming an integrated viewing package.
+- **Real lens geometry** should precede a serious front-module compatibility or clamp-integration claim.
+- **Power / I/O hardware evidence** and **digital-back synchronization evidence** are related but separate gates.
+- The system interface baseline should be updated only after these branches begin replacing assumed interfaces with measured ones.
+- A new integrated body revision should be treated as a downstream integration candidate, not as the starting point for discovering basic interface facts.
+
+This map intentionally avoids assigning dates or implying that one branch must wait idle while another is being tested.
+
+---
+
 ## 1. Digital-Back Mechanical Interface
 
 **Current evidence:**  
