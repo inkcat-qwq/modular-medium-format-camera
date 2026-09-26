@@ -15,7 +15,7 @@ The public repository may intentionally lag behind private internal work. A stat
 | Front module / closure | **HOLD / DEVELOPMENT STUDY** | FM2_CLOSURE03 | Integrated CAD review and analytical checks | Real lens geometry, physical clamp / safety evidence, and measured mechanical inputs |
 | Direct optical viewfinder | **CANDIDATE / SIMULATION** | VF9_DIRECT01 / retained D3 path | Optical simulation, packaging, and architecture studies | Physical optical bench and real eye-position validation |
 | Frameline / cue subsystem | **PRINCIPLE-VALIDATION CANDIDATE / SIMULATION** | VF13_FRAME_ARCH01 | Numerical architecture, registration, and optical-boundary studies | Independent fixed-brightline principle prototype |
-| Mechanical datum / repeatability | **CANDIDATE / SIMULATION** | TOL01 | Tolerance and reinstallation simulation | Physical datum and repeated-removal measurements |
+| Mechanical datum / repeatability | **SIMULATION / SENSITIVITY STUDY** | BODY2_TOL01 | Assumed-input Monte Carlo, reinstallation, seating, and locating sensitivity studies | Measured datum-chain, seating, guide, and repeated-removal evidence |
 | Control / communication | **DEVELOPMENT STUDY** | SYS_ELEC01 | Executable software state and degraded-mode models | Validate real external synchronization and module electrical boundaries |
 | Power / protection | **DEVELOPMENT STUDY** | SYS_POWER01 | Software energy, protection, and future-load studies | Measured loads, real power-path behavior, and thermal validation |
 | I/O / interconnect | **DEVELOPMENT STUDY** | SYS_IO01 | Interface classification and logical fault studies | Real contacts, harnesses, protection, ESD / EMC, and durability tests |
@@ -69,6 +69,7 @@ No subsystem in this matrix is currently production-released or manufacturing-fr
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
+- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](../development-log/body2-tol01-mechanical-tolerance-study.md)
 - [FM2_CLOSURE03 — Digital Closure Review](../development-log/fm2-closure03-digital-closure-review.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
 - [Revision History](../development-log/revision-history.md)
