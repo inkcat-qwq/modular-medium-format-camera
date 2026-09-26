@@ -115,6 +115,7 @@ Values and architectures described throughout the repository should not be consi
 
 ## Related Documents
 
+- [Subsystem Status Matrix](subsystem-status.md)
 - [System Architecture Overview](../architecture/system-overview.md)
 - [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
 - [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
