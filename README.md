@@ -1,101 +1,62 @@
 # Modular Medium Format Camera
 
-An experimental modular medium-format digital camera platform exploring and documenting mechanical, optical, interface, and system-level design.
+**Current phase: P1 Functional Prototype Development**
 
-![Modular Medium Format Camera — current architecture overview](images/renders/hero-overview.png)
+An experimental modular medium-format digital camera project. P1 aims to build and verify the first working camera through the complete shooting chain, from optical viewing and manual focus to exposure, controlled closing and an image saved by the digital back.
 
-> **Project status:** Pre-prototype / Simulation  
-> This project is under active development. Current dimensions, architectures, and design decisions are not manufacturing-ready specifications.  
-> **Public scope:** This repository contains curated public development records and may intentionally lag behind private internal development.
+![P1 system architecture: shared optics, BODY3 with body-mounted shutter, DM22 and independent viewing and control](images/renders/p1-system-architecture.svg)
 
-## Overview
+*Current functional relationships, not a physical prototype photograph or a manufacturing drawing. All subsystems still require physical verification.*
 
-The goal of this project is to develop a modular medium-format camera platform built around interchangeable subsystems rather than a single fixed camera design.
+> **Current gate:** P1-01 shutter **IMPLEMENTATION HOLD — NOT READY FOR CONTROLLED BENCH PLANNING**.  
+> No complete working prototype, working shutter, validated lens or iris, or fully compatible DM22 interface is claimed. No manufacturing or production release is implied.  
+> **P1 principle: FUNCTION FIRST.** Lightweight product optimization is intentionally deferred until after P1 validation.
 
-The project explores:
+## Current architecture
 
-- modular digital-back interfaces
-- interchangeable lens and front modules
-- direct optical viewfinder systems
-- structural datum and alignment architectures
-- mechanical tolerance and repeatability
-- early electronic system integration
+The maximum optical architecture is **645-class**. BODY3 replaces BODY2 as the current body direction; 6×7 is no longer the body target.
 
-The project is currently focused on architecture development, simulation, and interface validation.
+**Optical Insert → Universal Iris → FOCUS-H2 → BODY3 → K3 / ACT-E Focal-Plane Shutter → Rear Datum / Adapter → DM22**
 
-## Development Philosophy
+This is a functional chain: the iris and lens insert are carried by the non-rotating moving optical cage within H2; the shutter belongs to BODY3. It is not a literal sequence of separate optical elements.
 
-This repository documents not only successful designs, but also rejected concepts, simulation results, engineering trade-offs, and design decisions.
+| Subsystem | P1 role and evidence boundary |
+| --- | --- |
+| Optical Insert | A small lensboard-like carrier; initially one reference lens only. Real lens geometry, registration and locking remain open. |
+| Universal Iris | A shared aperture inside the moving optical cage, moving with focus. The actual iris mechanism is not yet implemented. |
+| FOCUS-H2 | Large-diameter manual focus mechanism with a non-rotating moving optical cage and direct measurement of actual lens position, q. Real motion and sensing need implementation. |
+| BODY3 | Structural host retaining a fixed rear datum, modular rear adapter and D3 shoulder finder. Strength, joints and practical service still need evidence. |
+| K3 + ACT-E | Flexible dual-curtain focal-plane shutter with direct closed-loop electric drive. Latest P1-01 IMPL02 retains a right-side drive candidate and optical / coded direct bar reference candidate; implementation remains on HOLD. |
+| Rear interface / DM22 | DM22 is the P1 digital back, with its own power, processing and storage. True mounting datum, registration, locking and synchronization are not fully verified. |
 
-The intention is to preserve the complete development history from early concepts to working prototypes.
+Parallel functions are **D3 Direct Optical Finder**, **Electronic Frameline**, **Three Focus Cue Lights** (NEAR / OK / FAR concept), **Electronic Range Assist**, and **Body Electronics / Control**. D3 provides the optical scene. Independent ranging, actual q and lens calibration inform focus guidance. Detailed information belongs on the body display; a full HUD is outside the current direction.
 
-## Current Stage
+## What is still blocked
 
-**Phase: Pre-prototype / Simulation**
+Shutter implementation, controlled closing, power / safe power, assembly and maintenance paths remain unresolved. Main-power-loss controlled close is an architecture under study; total-energy-loss autonomous mechanical close is **NOT CLOSED / NOT VALIDATED**.
 
-Current work includes:
+H2 motion and q sensing, the actual universal iris, Optical Insert datums / locking and real lens data, DM22 registration / sync, and physical electronics / range / UI implementation also remain open. CAD checks and simulations do not establish physical performance.
 
-- system architecture
-- mechanical interface development
-- optical viewfinder and frameline development
-- tolerance analysis
-- modular body structure
-- front-module closure / retention studies
-- electronics / control architecture
+P1 can be heavier and larger, use larger actuators and boards, external development power, and ordinary prototype materials. Function, adjustability, repeatability, safety and serviceability take priority over weight, appearance and product packaging. Portability is **DEFERRED PRODUCT OPTIMIZATION**, not a solved requirement. Magnesium, CFRP and hybrid structures are possible post-P1 research directions; no GEN1-L CAD or completed lightweight design is introduced.
 
-No design is currently considered production-ready or manufacturing-frozen.
+## Read the project in five minutes
 
-## Documentation
+1. [Current state](docs/overview/current-state.md) — phase, current configuration and blockers.
+2. [System architecture](docs/architecture/system-overview.md) — subsystem relationships and a concept view.
+3. [Subsystem status](docs/overview/subsystem-status.md) — evidence levels and next gates.
+4. [Physical validation roadmap](docs/overview/physical-validation-roadmap.md) — P1-01 through P1-07; an evidence sequence, not a calendar schedule.
+5. [P1 transition](docs/development-log/p1-functional-prototype-transition.md) — why BODY2 / FM-C gave way to BODY3 / P1.
 
-Start here:
+Further detail: [Electronics and control](docs/architecture/electronics-control-overview.md), [function-first decision](docs/design-decisions/DD-003-p1-function-first.md), [modularity](docs/design-decisions/DD-001-modular-platform-architecture.md), [positioning / seating / clamping](docs/design-decisions/DD-002-separate-positioning-seating-clamping.md), and [public graphics](images/renders/README.md).
 
-- [Current Project State](docs/overview/current-state.md)
-- [Subsystem Status Matrix](docs/overview/subsystem-status.md)
-- [Physical Validation Roadmap](docs/overview/physical-validation-roadmap.md)
-- [System Architecture Overview](docs/architecture/system-overview.md)
-- [Electronics & Control Architecture](docs/architecture/electronics-control-overview.md)
+## Development history
 
-### Design Decisions
+[Development log](docs/development-log/README.md) · [Revision history](docs/development-log/revision-history.md) · [September evolution](docs/development-log/2026-09-project-evolution.md)
 
-- [DD-001 — Modular Camera Platform Architecture](docs/design-decisions/DD-001-modular-platform-architecture.md)
-- [DD-002 — Separate Positioning, Seating, and Clamping Functions](docs/design-decisions/DD-002-separate-positioning-seating-clamping.md)
+BODY2_REV05, BODY2_TOL01, FM2 / FM-C, relay / SIDE / HUD / VF studies and the SYS electronics studies remain available as history. The old Copal-in-each-lens front architecture is **SUPERSEDED / HISTORICAL**. Its failed closure studies are preserved; they do not describe the active front end.
 
-### Development History
+## Public scope and licensing
 
-- [BODY2_REV05 — Architecture Integration](docs/development-log/body2-rev05-architecture-integration.md)
-- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](docs/development-log/body2-tol01-mechanical-tolerance-study.md)
-- [FM2_CLOSURE03 — Digital Closure Review](docs/development-log/fm2-closure03-digital-closure-review.md)
-- [VF13_FRAME_ARCH01 — Frameline Architecture Study](docs/development-log/vf13-frameline-architecture.md)
-- [Viewfinder, HUD, and Frameline Evolution](docs/development-log/viewfinder-hud-frameline-evolution.md)
-- [Development Log](docs/development-log/README.md)
-- [Project Evolution — September 2026](docs/development-log/2026-09-project-evolution.md)
-- [Revision History](docs/development-log/revision-history.md)
+This is an **open-development, controlled-release documentation repository**. It publishes curated architecture, history and sanitized diagrams under the [Public Release Policy](PUBLIC_RELEASE_POLICY.md). Complete CAD, manufacturing geometry, parameter registers, optical prescriptions, simulation sources, detailed interface data and third-party manuals are excluded.
 
-## Repository Structure
-
-```text
-modular-medium-format-camera/
-├── docs/
-│   ├── architecture/
-│   ├── design-decisions/
-│   ├── development-log/
-│   └── overview/
-│
-├── images/
-│   ├── history/
-│   └── renders/
-│
-├── .gitignore
-├── PUBLIC_RELEASE_POLICY.md
-└── README.md
-```
-
-## Release Policy
-
-See [Public Release Policy](PUBLIC_RELEASE_POLICY.md) for the repository's public/private release boundaries and review rules.
-
-## Licensing
-
-No license is currently granted for the design files or engineering documentation in this repository.
-
-Licensing and possible future open-hardware release terms remain under consideration.
+Publication does not grant a license to manufacture or reuse the designs. Licensing and possible future open-hardware terms remain under consideration.

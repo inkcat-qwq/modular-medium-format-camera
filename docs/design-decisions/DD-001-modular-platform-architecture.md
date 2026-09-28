@@ -1,5 +1,8 @@
 # DD-001 — Modular Camera Platform Architecture
 
+> **P1 application (2026-09-28):** Controlled modularity remains a retained principle. The subsystem list below records the original decision context. Its current application is BODY3, a body-mounted K3 / ACT-E shutter, FOCUS-H2 with a shared moving iris, one reference Optical Insert, modular rear adapter / DM22 and D3. It does not retain FM-C or Copal in each lens as the current front architecture. See [P1 function-first decision](DD-003-p1-function-first.md). Physical validation remains incomplete.
+
+
 > **Decision status:** ACCEPTED — Retained architectural principle  
 > **Validation status:** PRE-PROTOTYPE  
 > **Date:** September 2026

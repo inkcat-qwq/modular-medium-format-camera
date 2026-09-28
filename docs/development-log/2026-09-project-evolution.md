@@ -1,7 +1,7 @@
 # Project Evolution — September 2026
 
 > **Document type:** Development history  
-> **Project stage:** Simulation / Pre-prototype  
+> **Current phase:** P1 Functional Prototype Development  
 > **Date:** September 2026
 
 This document summarizes the major publicly documented architectural evolution of the Modular Medium Format Camera project up to the current published stage.
@@ -9,6 +9,8 @@ This document summarizes the major publicly documented architectural evolution o
 It is intended to preserve the reasoning and progression of the project rather than provide manufacturing specifications.
 
 ---
+
+> **Reading this chronology:** Sections 1–13 preserve the earlier public development account. Their present-tense descriptions and proposed next steps are historical context. Sections 14–19 record the later BODY3 / shutter / P1 transition.
 
 ## 1. Initial Concept
 
@@ -208,7 +210,7 @@ No PCB, connector system, battery architecture, digital-back protocol, or produc
 
 ---
 
-## 12. Current Architecture
+## 12. Current Architecture at the Earlier Public Milestone (Historical)
 
 The currently published project architecture consists of:
 
@@ -231,7 +233,7 @@ No complete physical camera prototype has yet validated the system.
 
 ---
 
-## 13. Current Development Direction
+## 13. Current Development Direction at That Milestone (Historical)
 
 The next major transition is from architecture and simulation toward selective physical validation.
 
@@ -247,6 +249,38 @@ Important future validation work includes:
 - eventual imaging tests
 
 The architecture may continue to change as physical test results become available.
+
+---
+
+## 14. Body-Shutter Transition and BODY3
+
+The later architecture moves the shutter into the body and uses 645-class as the maximum optical scope, replacing the earlier 6×7 body ambition. BODY3 replaces BODY2 as the active body direction, retaining D3 and a fixed rear datum independent of the shutter, with a modular rear adapter. BODY3 architecture, structural packaging and frame studies have different local gates; none establishes complete physical camera readiness.
+
+## 15. Flexible Focal-Plane Shutter and Electric Actuation
+
+SHUTTER01 retained K3 flexible dual curtains as the primary research direction. SHUTTER02 exposed mechanical closure gaps. SHUTTER03 selected ACT-E direct closed-loop electric drive over the active ACT-S route to simplify the normal braking, capture and reset chain, while leaving hardware / safe closing on HOLD. SHUTTER04 introduced realistic actuator, power, support and service constraints without closing those gates.
+
+## 16. Focus and Lens Architecture Redesign
+
+FOCUS-H2 replaces FM-C as the front direction. A large manual focus ring moves a non-rotating optical cage whose actual q must be measured directly. A shared Universal Iris travels with the cage. The user-replaceable Optical Insert becomes a lensboard-like optical carrier rather than a complete per-lens focusing / shutter system. Only one reference lens is planned initially, with real optical geometry and compatibility still open.
+
+## 17. Whole-Camera Concept Integration
+
+CAMERA_GEN1_CONCEPT01 brought BODY3, H2, the shared iris and the reference insert into a whole-camera concept. Its native delivery limitation was recorded rather than hidden. D3 retained optical scene viewing, while electronic frameline, three small focus cues and independent ranging became the intended assistance layer; a full HUD was not reopened.
+
+## 18. Portability Review and Native Recovery
+
+CAMERA_GEN1_COMPACT01 recovered native CAD delivery and recorded more explicit mass, envelope and service evidence. It did not close the product portability gate or demonstrate physical camera function. Structural variants and modelled mass reductions did not prove real mechanisms, stiffness, lens compatibility or DM22 registration.
+
+## 19. P1 Functional Prototype Transition
+
+CAMERA_P1_BASELINE01 made P1 the active function-first mainline: first establish the complete shooting chain, then optimize the product. Weight and packaging are DEFERRED PRODUCT OPTIMIZATION. Larger prototype hardware and external development power may be considered while function, safety, repeatability and service gates remain required. Magnesium / CFRP / hybrid structures remain possible post-P1 research, with no GEN1-L CAD introduced.
+
+P1-01_SHUTTER_IMPL01 and IMPL02 continued implementation. The latest IMPL02 retains a right-side drive arrangement and an optical / coded direct bar reference candidate, but remains **IMPLEMENTATION HOLD — NOT READY FOR CONTROLLED BENCH PLANNING**. Main-power-loss closing is under study; total-energy-loss autonomous mechanical closing is **NOT CLOSED / NOT VALIDATED**.
+
+H2 motion / q sensing, the actual iris, insert locking / real reference-lens data, DM22 registration / synchronization, physical D3 assistance / ranging and electronics / power / UI remain open. P1 is a development phase, not a completed prototype. The current [evidence roadmap](../overview/physical-validation-roadmap.md) follows P1-01 through P1-07.
+
+These additions summarize the reviewed source milestones without inventing exact calendar dates. See [P1 transition](p1-functional-prototype-transition.md), [BODY3 development](body3-development.md) and [shutter development](shutter-architecture-development.md) for evidence scope.
 
 ---
 

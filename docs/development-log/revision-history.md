@@ -2,7 +2,7 @@
 
 > **Document type:** Historical revision index  
 > **Status:** Living document  
-> **Last updated:** September 2026  
+> **Last updated:** 2026-09-28  
 > **Public documentation note:** This index describes publicly documented development milestones and may intentionally lag behind private internal development.
 
 This document records historical revision identifiers used during development of the Modular Medium Format Camera project.
@@ -30,6 +30,31 @@ Historical items may be described using the following states:
 - `HOLD` — work intentionally not advanced to freeze or release pending further evidence
 
 ---
+
+## BODY3, shutter and P1 milestones
+
+The current phase is **P1 Functional Prototype Development**. CURRENT P1 DIRECTION means selected for further development, not physically verified. This table gives milestone order and status; it does not infer exact dates or equal maturity.
+
+| Milestone | Public status | Contribution and remaining boundary |
+| --- | --- | --- |
+| BODY3_SHUTTER_ARCH01 | CANDIDATE | Body-mounted shutter architecture with fixed rear datum and retained D3; architecture continuation only. |
+| BODY3_STRUCTPACK01 | HOLD | Structural packaging candidate; real DM22 removal and full service sequence unresolved. |
+| BODY3_FRAME01 | CANDIDATE | Digital frame direction retained; real structural validation required; no system release. |
+| SHUTTER01_KIN01 | CANDIDATE / HOLD | K3 flexible-curtain primary research; kinematic implementation incomplete. |
+| SHUTTER02_DRIVE01 | HOLD | K3 retained; mechanical drive, braking, reset and assembly closure incomplete. |
+| SHUTTER03_ACTUATION01 | CANDIDATE / HOLD | ACT-E next mainline; ACT-S SUPERSEDED as active drive, retained as reference; hardware and safe closing open. |
+| SHUTTER04_IMPL01 | HOLD / historical implementation | Realistic actuator / power / packaging study; implementation and safe-close gaps retained. Later P1 implementation candidates supersede its component assumptions. |
+| CAMERA_GEN1_CONCEPT01 | CONCEPT / HOLD | Whole-camera BODY3 / H2 / iris / insert integration; native delivery incomplete at that milestone. |
+| CAMERA_GEN1_COMPACT01 | CANDIDATE / product HOLD | Native delivery recovered; portability not achieved. Inherited host evidence for P1; not physical camera validation. |
+| CAMERA_P1_BASELINE01 | CURRENT P1 DIRECTION | Function-first strategy and P1-01 through P1-07 sequence; lightweight product optimization deferred. |
+| P1-01_SHUTTER_IMPL01 | HOLD / SUPERSEDED implementation candidate | First function-first shutter implementation; failed placement / sensor / assembly / safety evidence retained. |
+| P1-01_SHUTTER_IMPL02 | CURRENT P1 DIRECTION / IMPLEMENTATION HOLD | Right-side drive and optical / coded direct bar reference candidates; NOT READY FOR CONTROLLED BENCH PLANNING. |
+
+Source basis and interpretation: [P1 transition](p1-functional-prototype-transition.md), [BODY3 development](body3-development.md), [shutter development](shutter-architecture-development.md). Main-power-loss controlled closing is under study; total-energy-loss autonomous close is **NOT CLOSED / NOT VALIDATED**.
+
+## Earlier milestone index — historical scope
+
+The entries below preserve their original milestone results. “Retained”, “current” and proposed next steps refer to the recorded stage, not a current hardware release. BODY2 is superseded by BODY3; FM2 / FM-C and the Copal front architecture are SUPERSEDED / HISTORICAL HOLD. D3 remains the optical direction, while VF13 fixed brightlines are historical principle evidence. SYS records remain traceability / software history; conflicting assumptions do not override P1.
 
 ## Body Architecture
 
@@ -347,9 +372,9 @@ The baseline is a traceability and consistency milestone, not a design freeze; p
 
 ---
 
-## Publicly Documented Direction
+## Historical Public Direction Before P1
 
-The currently published architecture is the result of several parallel development paths:
+The earlier public architecture resulted from the parallel paths below. This preserved map ends at the pre-P1 public state; use the P1 milestone table above for the current direction:
 
 ```text
 Body Architecture

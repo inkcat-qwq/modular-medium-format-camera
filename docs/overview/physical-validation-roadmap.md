@@ -1,342 +1,93 @@
 # Physical Validation Roadmap
 
-> **Project stage:** Pre-prototype / Simulation  
-> **Roadmap type:** Evidence-gathering and validation sequence  
-> **Scope:** Publicly documented next-step work  
-> **Last updated:** September 2026
+> **Current phase:** P1 Functional Prototype Development  
+> **Roadmap type:** Evidence sequence, not a calendar schedule  
+> **Current gate:** P1-01 IMPLEMENTATION HOLD — NOT READY FOR CONTROLLED BENCH PLANNING  
+> **Updated:** 2026-09-28
 
-This roadmap describes the physical evidence needed to move the Modular Medium Format Camera project from architecture and simulation toward increasingly credible subsystem validation.
+P1 aims to demonstrate a complete working camera before lightweight product redesign. The sequence below follows CAMERA_P1_BASELINE01, with the shutter entry updated by P1-01_SHUTTER_IMPL02. It replaces the former BODY2 / FM-C validation sequence.
 
-It is **not** a project schedule, manufacturing release, procurement plan, or commitment to a particular supplier, component, or final mechanism.
+![P1 development evidence sequence](../../images/renders/p1-development-roadmap.svg)
 
-The public repository may intentionally lag behind private internal development. Exact private dimensions, forces, coordinates, optical prescriptions, electrical pin budgets, and detailed tolerance values are intentionally omitted here.
-
----
-
-## Roadmap Principle
-
-The next stage should reduce uncertainty before adding complexity.
-
-The preferred order is:
-
-1. establish real physical reference data
-2. validate removable-interface behavior
-3. validate optical / ergonomic principles
-4. validate front-module mechanics
-5. validate electrical and synchronization boundaries
-6. feed measured evidence back into the system baseline
-7. only then consider a new integrated body revision
-
-A successful test should close a clearly defined question. A failed test should still be preserved if it narrows the design space.
-
----
-
-## Evidence Dependency Map
-
-The workstreams below are not required to happen strictly one after another. Several can proceed in parallel.
-
-The arrows in this diagram mean **evidence dependency**, not calendar order. A downstream gate should not be treated as credible until the upstream physical evidence it depends on exists.
-
-```mermaid
+~~~mermaid
+%%{init: {"theme": "neutral", "fontFamily": "Arial", "flowchart": {"wrappingWidth": 280}}}%%
 flowchart TD
-    A[Measured digital-back geometry]
-    B[Rear datum / seating repeatability]
-    C[BODY2_TOL01 updated with measured inputs]
+    P01["P1-01 Shutter Implementation - current HOLD"] --> P02["P1-02 FOCUS-H2 Mechanism"]
+    P02 --> P03["P1-03 Universal Iris + Optical Insert"]
+    P03 --> P04["P1-04 DM22 Registration / Synchronization"]
+    P04 --> P05["P1-05 Electronics / Power / Range / UI"]
+    P05 --> P06["P1-06 P1 Master Integration"]
+    P06 --> P07["P1-07 Controlled Bench / Prototype Release Planning"]
+    P07 --> TEST["Separately reviewed physical execution and evidence"]
+    TEST --> VALID["Complete P1 function validation"]
+    VALID --> LIGHT["Post-P1 lightweight product redesign"]
+~~~
 
-    D[Real eye / face observations]
-    E[Fixed-brightline principle prototype]
-    F[Finder + packaging integration gate]
+Arrows show the main development and evidence dependency order, not dates or automatic approvals. Preparation can expose downstream unknowns early; provisional inputs cannot be treated as closed interfaces. A serious architecture finding can justify a documented sequence review. Weight alone does not change this sequence.
 
-    G[Measured real-lens envelope]
-    H[Front-module clamp / safety prototype]
-    I[Front-module physical gate]
+Each stage must distinguish completed design evidence, required physical measurements and tests that have not been executed. Limited subsystem tests, if separately reviewed and permitted, do not imply an integrated prototype release. P1-07 reviews the controlled execution plan; its presence on this roadmap is not permission to start now.
 
-    J[Measured loads + representative contacts / harness]
-    K[Power / I/O hardware gate]
+## P1-01 — Shutter Implementation
 
-    L[Observed digital-back synchronization boundary]
-    M[Synchronization interface gate]
+**Current evidence:** K3 / ACT-E candidate, right-side drive arrangement and optical / coded direct bar sensing candidate. IMPL02 reports local installed-state improvements alongside hard interferences, incomplete assembly / bearing service and incomplete safe closing.
 
-    N[SYS_ICD01 updated with measured interfaces]
-    O[Integrated body-revision candidate]
+**Required evidence:** actual moving-load and actuator behavior; implementable transmission / supports; direct bar feedback and independent endpoints; complete assembly and maintenance routes preserving fixed datums; real main / safety power and fault behavior. Main-power-loss controlled closing and total-energy-loss autonomous closing must be evaluated separately.
 
-    A --> B
-    B --> C
+**Exit gate:** an implementation and safety review can support a bounded, measurable next validation plan with unresolved conditions explicitly recorded. No numeric shutter speed, closing time or safety performance is released here. **NOT READY FOR CONTROLLED BENCH PLANNING** remains the current result.
 
-    D --> F
-    E --> F
+## P1-02 — FOCUS-H2 Mechanism
 
-    G --> H
-    H --> I
+**Current evidence:** large-diameter manual-focus and non-rotating cage architecture, structural candidates and selected digital motion checks. Smooth functional envelopes are not a working motion mechanism.
 
-    J --> K
-    L --> M
+**Required evidence:** actual motion pair, bearings / support, anti-rotation, axial retention, assembly, torque / backlash / repeatability and direct q sensing integration. The mechanism must fit the applicable shutter and body boundaries.
 
-    C --> N
-    F --> N
-    I --> N
-    K --> N
-    M --> N
+**Exit gate:** a concrete P1 motion implementation with inspectable assembly and measurement methods. Direct actual cage position must be compared against a reference; ring angle alone is insufficient. Physical results remain unverified until executed.
 
-    N --> O
-```
+## P1-03 — Universal Iris + Optical Insert
 
-### How to read the map
+**Current evidence:** a shared moving iris concept and one reference-lens insert candidate; actual blades, aperture feedback and real optical design remain open.
 
-- **Digital-back geometry** must be measured before rear repeatability and datum-chain conclusions can become physical rather than assumed.
-- **Finder principle validation** and **real eye / face packaging evidence** are separate inputs; both are needed before claiming an integrated viewing package.
-- **Real lens geometry** should precede a serious front-module compatibility or clamp-integration claim.
-- **Power / I/O hardware evidence** and **digital-back synchronization evidence** are related but separate gates.
-- The system interface baseline should be updated only after these branches begin replacing assumed interfaces with measured ones.
-- A new integrated body revision should be treated as a downstream integration candidate, not as the starting point for discovering basic interface facts.
+**Required evidence:** iris motion / aperture / power-loss behavior, moving connections, daily insert exchange versus technical iris removal, positive retention and reinstall repeatability. Real reference-lens geometry must establish aperture-plane compatibility, registration and image-path clearance.
 
-This map intentionally avoids assigning dates or implying that one branch must wait idle while another is being tested.
+**Exit gate:** one coherent reference-lens / iris / insert implementation and evidence for its defined operations. Missing real optical data keeps the gate open. No second lens or universal compatibility is implied.
 
----
+## P1-04 — DM22 Registration / Synchronization
 
-## 1. Digital-Back Mechanical Interface
+**Current evidence:** modular rear interface intent and a reference back envelope. The real mounting datum, lock, register and external synchronization boundary are not fully established.
 
-**Current evidence:**  
-The rear interface has a defined architectural role, but the real digital-back seating geometry, locking behavior, installation path, and physical clearances are not yet fully established.
+**Required evidence:** safe external measurements, seating and retention, removal / reinstall behavior, calibrated imaging relationship, supported synchronization and actual saved-image observation. Preserve the fixed body rear datum.
 
-**Unresolved question:**  
-What geometry actually determines the digital back's position and imaging relationship when installed on the camera?
+**Exit gate:** a physically grounded registration and synchronization interface, with a safe acquisition validation route. Shutter closed, sync observed and image stored are distinct evidence. Storage may be confirmed by the user on DM22; do not invent an automatic write-complete signal.
 
-**Minimum physical evidence needed:**
+## P1-05 — Electronics / Power / Range / UI
 
-- measured seating and contact references
-- documented installed orientation
-- observed locking / retention behavior
-- installation and removal path
-- relevant local protrusions and operating clearances
-- repeatable reference for the imaging-plane relationship
+**Current evidence:** P1 responsibilities and historical software studies, not current hardware validation. D3 optical viewing remains independent of electronic assistance.
 
-**Exit criterion:**  
-The project can describe the rear interface using measured physical references rather than placeholder or inferred geometry, with remaining unknowns explicitly separated.
+**Required evidence:** body and local shutter control, power / protection / harnesses, calibrated q / distance / lens pairing, iris status, electronic frameline and three cue lights, body display and controls. Verify physical D3 viewing and alignment with a consistent optical configuration. Test data freshness, invalid calibration, faults and ambiguous capture outcomes.
 
----
+**Exit gate:** real hardware and assistance interfaces with measured behavior and explicit limits. Unknown data must not produce OK or false capture success; a fault must not trigger automatic re-exposure. The historical fixed-brightline study alone does not satisfy electronic frameline implementation.
 
-## 2. Rear-Interface Repeatability and Datum Chain
+## P1-06 — P1 Master Integration
 
-**Current evidence:**  
-BODY2_TOL01 shows that locating, seating, calibration, and removal / reinstallation behavior can materially affect the mechanical error chain, but its inputs remain largely assumed.
+**Current evidence:** inherited concept host and configuration baseline; no complete physical camera validation.
 
-**Unresolved question:**  
-Does the removable rear interface return to a sufficiently repeatable mechanical state, and which physical features actually control that state?
+**Required evidence:** matching subsystem versions and interfaces, body joint / datum integrity, practical assembly / service, calibration responsibilities and a traceable end-to-end shooting procedure. Keep unexecuted physical checks separate from CAD / software results.
 
-**Minimum physical evidence needed:**
+**Exit gate:** a coherent integration candidate whose complete shooting chain and function / safety / repeatability conditions are testable. A master CAD file alone cannot close this gate.
 
-- repeated install / remove / reinstall measurements
-- measurable XY positioning reference
-- measurable axial seating reference
-- support / contact behavior under normal retention
-- variation across repeated cycles
-- a traceable front-to-rear datum chain
+## P1-07 — Controlled Bench / Prototype Release Planning
 
-**Exit criterion:**  
-Repeatability is described by measured distributions tied to real datums and contact features, allowing the assumed-input tolerance model to be replaced or revised.
+**Entry:** reviewed implementation and integration evidence, explicit remaining risks, measurement requirements and defined release boundaries.
 
----
+**Required evidence:** a staged build / assembly / low-energy-motion / exposure plan, equipment and data-recording needs, stop conditions and operating constraints. Numerical acceptance criteria must come from applicable evidence and review, not old modelling assumptions.
 
-## 3. Right-Eye, Face-Clearance, and Real Packaging
+**Exit gate:** a bounded release decision for a specific controlled activity. Physical results must then be recorded before claiming P1 validation. This public roadmap does not authorize procurement, manufacture, real-back exposure or safety certification.
 
-**Current evidence:**  
-The direct-view finder architecture and several packaging studies use assumed eye and face references. These are useful for screening but do not demonstrate real ergonomic clearance.
+## After P1
 
-**Unresolved question:**  
-Can the intended right-eye viewing position coexist with the real camera body, digital back, controls, and removable optical modules?
+Only after the functional camera chain is demonstrated should weight, packaging, industrial design and possible magnesium / CFRP / hybrid structures drive product redesign. Current portability limitations remain recorded as **DEFERRED PRODUCT OPTIMIZATION**. No lightweight performance or GEN1-L CAD is claimed.
 
-**Minimum physical evidence needed:**
-
-- real viewing posture and eye-position observations
-- brow / nose / cheek clearance checks
-- digital-back access checks
-- battery / control access where relevant
-- finder service / removal clearance
-- representative hand and operating postures
-
-**Exit criterion:**  
-A documented viewing and operating envelope exists using real physical observations, and no critical hard interference remains in the intended use posture.
-
----
-
-## 4. Direct-View Finder and Fixed-Brightline Bench
-
-**Current evidence:**  
-The direct-view finder is a retained simulation candidate. VF13 identifies a fixed optical brightline as the preferred first framing-information principle test.
-
-**Unresolved question:**  
-Can the direct scene and fixed frameline be viewed together with acceptable visibility, focus impression, eye-position tolerance, and manageable stray reflections?
-
-**Minimum physical evidence needed:**
-
-- direct-view optical bench or representative prototype
-- fixed-brightline visibility check
-- frameline focus / apparent-distance check
-- intended eye-position sweep
-- full-frame visibility check
-- brightness / contrast observations
-- ghost and stray-reflection observations
-- alignment / re-alignment demonstration
-
-**Exit criterion:**  
-The fixed-brightline concept is physically demonstrated across the intended viewing region, with known failure modes and a credible alignment / service strategy.
-
-Dynamic frameline correction should remain deferred unless this simpler architecture proves physically viable.
-
----
-
-## 5. Front-Module Clamp, Safety, and Serviceability
-
-**Current evidence:**  
-FM2_CLOSURE03 integrated holding, retention, preload, safety, service, and lens-envelope concepts but remained on HOLD because digital closure was not achieved.
-
-**Unresolved question:**  
-Can the front module be retained, released, adjusted, and serviced safely without hidden interference, loose-part risk, or dependence on unverified elastic behavior?
-
-**Minimum physical evidence needed:**
-
-- representative clamp / retention prototype
-- preload / release behavior
-- positive safety sequence
-- captured-part behavior
-- repeated opening / closing cycles
-- tool and finger access
-- module removal / installation sequence
-- observed wear or instability during repeated use
-
-**Exit criterion:**  
-A physical mechanism demonstrates a complete service sequence with no unresolved hard interference, no uncontrolled loose-part path, and repeatable retention behavior suitable for continued integration work.
-
----
-
-## 6. Real Lens Envelope and Control Motion
-
-**Current evidence:**  
-Digital lens-envelope studies identified conflicts and showed that nominal barrel diameter alone is not enough to define compatibility.
-
-**Unresolved question:**  
-What real geometric and operational envelope must the front-module architecture support for the intended first lens or lens family?
-
-**Minimum physical evidence needed:**
-
-- measured external lens geometry
-- actual mounting / register references
-- focus travel
-- shutter / aperture / release-control protrusions where applicable
-- control-motion paths
-- rear-element and internal-clearance information
-- representative service and handling access
-
-**Exit criterion:**  
-At least one real lens configuration can be described by a measured compatibility envelope that can be checked against the front-module and finder architecture.
-
-The project should avoid claiming universal lens compatibility from this milestone.
-
----
-
-## 7. Power, Contacts, Harness, and Protection
-
-**Current evidence:**  
-SYS_POWER01 and SYS_IO01 define architectural responsibilities and software-simulated failure behavior, but no released electrical hardware exists.
-
-**Unresolved question:**  
-Can the camera's modular electrical interfaces operate safely and predictably with real contacts, wiring, loads, and power transitions?
-
-**Minimum physical evidence needed:**
-
-- representative contact / connector hardware
-- real continuity and insertion / removal behavior
-- measured subsystem loads
-- power-up / power-down behavior
-- fault-current / protection observations
-- contact-misalignment or partial-engagement checks
-- basic harness routing and serviceability
-- thermal observations under representative use
-
-Where relevant, later testing should also cover ESD / EMC and durability.
-
-**Exit criterion:**  
-A representative low-voltage hardware chain demonstrates stable power and data behavior under normal use and defined fault cases without relying solely on software assumptions.
-
----
-
-## 8. Digital-Back Synchronization Boundary
-
-**Current evidence:**  
-The electronics architecture treats digital-back synchronization as an external interface boundary. Current software models do not prove a real protocol or electrical implementation.
-
-**Unresolved question:**  
-What external readiness, wake, synchronization, or exposure-completion behavior is actually available and safe to use with the real digital back?
-
-**Minimum physical evidence needed:**
-
-- authoritative interface documentation where available
-- non-destructive observation of real synchronization behavior
-- timing observations
-- clear separation between proven signals and assumed software events
-- defined behavior for unavailable / invalid / timeout conditions
-- isolation or protection evidence where an electrical interface is used
-
-**Exit criterion:**  
-The project has a documented, physically observed synchronization boundary that can be represented in the system interface baseline without inventing unsupported signals or timing guarantees.
-
----
-
-## Integration Gate After Physical Evidence
-
-The roadmap does not end when individual bench tests pass.
-
-Measured results should be fed back into:
-
-- system interface control
-- calibration ownership
-- mechanical tolerance models
-- body packaging
-- service architecture
-- electronics responsibilities
-
-A later integrated body revision should be considered only when the evidence is strong enough to replace major placeholder assumptions in several subsystems at once.
-
-At minimum, a new integration gate should require:
-
-- measured digital-back references
-- measured rear-interface repeatability
-- a physically demonstrated direct-view / frameline path
-- a physically credible front-module retention concept
-- at least one measured lens envelope
-- a defined power / contact strategy
-- a physically supported synchronization boundary
-
-Passing one workstream does not automatically validate the full camera.
-
----
-
-## What This Roadmap Does Not Authorize
-
-This document does not authorize:
-
-- production
-- manufacturing drawings
-- procurement
-- public release of private engineering source
-- final optical prescriptions
-- final connector / pinout selection
-- final battery or power architecture
-- final lens compatibility claims
-- final digital-back compatibility claims
-- safety certification
-- commercial use claims
-
----
-
-## Related Documents
-
-- [Current Project State](current-state.md)
-- [Subsystem Status Matrix](subsystem-status.md)
-- [System Architecture Overview](../architecture/system-overview.md)
-- [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
-- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](../development-log/body2-tol01-mechanical-tolerance-study.md)
-- [FM2_CLOSURE03 — Digital Closure Review](../development-log/fm2-closure03-digital-closure-review.md)
-- [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
+- [Current state](current-state.md)
+- [Subsystem status](subsystem-status.md)
+- [P1 transition](../development-log/p1-functional-prototype-transition.md)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)

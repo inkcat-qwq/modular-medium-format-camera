@@ -1,5 +1,8 @@
 # DD-002 — Separate Positioning, Seating, and Clamping Functions
 
+> **P1 application (2026-09-28):** This principle is retained for BODY3, the rear adapter and Optical Insert. Historical BODY2 studies below are background evidence, not measured P1 repeatability or DM22 compatibility. See [current system architecture](../architecture/system-overview.md).
+
+
 > **Decision status:** ACCEPTED — Retained mechanical design principle  
 > **Validation status:** SIMULATION  
 > **Date:** September 2026

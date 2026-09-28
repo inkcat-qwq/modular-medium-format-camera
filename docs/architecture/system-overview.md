@@ -1,205 +1,89 @@
 # System Architecture Overview
 
-> **Status:** CANDIDATE / SIMULATION  
-> **Development stage:** Pre-prototype  
-> **Last updated:** September 2026
+> **Current phase:** P1 Functional Prototype Development  
+> **Direction:** 645-class maximum optical architecture / BODY3  
+> **Evidence:** Architecture, CAD and simulation; complete physical system not verified  
+> **Updated:** 2026-09-28
 
-## Purpose
+P1 is intended to demonstrate the complete camera function before product weight and packaging optimization. This page describes the current functional responsibilities, not released geometry or compatibility.
 
-This document describes the currently published high-level architecture of the Modular Medium Format Camera project.
+## System diagram
 
-The system is designed as a modular camera platform rather than a single fixed camera body. Major functional and structural subsystems are intended to remain independently replaceable where practical.
-
-The architecture is still under development and should not be treated as a manufacturing specification.
-
-## High-Level System
-
-The current camera concept is divided into several major subsystems:
-
-## System Diagram
-
-```mermaid
+~~~mermaid
+%%{init: {"theme": "neutral", "fontFamily": "Arial", "flowchart": {"wrappingWidth": 220}}}%%
 flowchart LR
-    L[Lens / Front Module]
-    C[Central Structural Core]
-    B[Digital Back Adapter]
-    D[Digital Back]
-    V[Direct Optical Viewfinder]
-    F[Frameline / Cue Subsystem]
-    E[Electronics / Control]
+    subgraph Imaging["Imaging and structural relationships"]
+        direction TB
+        OI["Optical Insert - one reference lens"] --> IR["Universal Iris - shared and moving"]
+        IR --> H2["FOCUS-H2 - manual focus / non-rotating cage"]
+        H2 --> B3["BODY3 - structural host"]
+        B3 --> SH["K3 / ACT-E focal-plane shutter - IMPLEMENTATION HOLD"]
+        SH --> RA["Fixed rear datum / modular adapter"]
+        RA --> DM["DM22 - registration / sync unverified"]
+    end
+    subgraph Viewing["Parallel optical viewing and assistance"]
+        direction TB
+        SC["Scene"] --> D3["D3 Direct Optical Finder"]
+        D3 --> EYE["Optical scene to eye"]
+        RANGE["Independent electronic ranging"] --> CTRL["Body Electronics / Control"]
+        Q["Direct actual q measurement"] --> CTRL
+        CAL["Reference lens calibration"] --> CTRL
+        CTRL --> FRAME["Electronic Frameline - implementation required"]
+        CTRL --> CUES["Three Focus Cue Lights - NEAR / OK / FAR concept"]
+        FRAME -.-> EYE
+        CUES -.-> EYE
+        CTRL --> UI["Body display - detailed information"]
+    end
+~~~
 
-    L --- C
-    C --- B
-    B --- D
+The imaging chain shows responsibilities, not optical-element order or an assembly procedure. The iris and Optical Insert reside in the moving H2 optical cage; the shutter is body-mounted. The parallel control branch receives actual H2 q and coordinates the shutter, iris and DM22 synchronization boundary. Dashed links to the eye indicate intended display assistance, not verified optical hardware. The rear datum remains part of the fixed body structure, independent of the removable shutter.
 
-    C --- V
-    V --- F
-    C --- E
-```
+![Dimension-free whole-camera relationship view](../../images/renders/p1-whole-camera-concept.svg)
 
-1. Central structural core
-2. Rear digital-back interface
-3. Front / lens module interface
-4. Optical viewfinder system
-5. Frameline / cue subsystem
-6. Mechanical datum and clamping architecture
-7. Electronics / control subsystem
+*Conceptual arrangement only: no scale, manufacturing dimensions, optical prescription or finished enclosure is represented.*
 
-Each subsystem is intended to have a clearly defined mechanical and functional interface.
+## BODY3 and the rear boundary
 
-## Central Structural Core
+BODY3 supersedes BODY2 as the structural direction. It carries the front focusing system, D3 shoulder finder and body-mounted shutter while retaining a fixed rear datum and a modular rear adapter. The maximum optical architecture is 645-class; earlier 6×7 ambitions do not define the current body.
 
-**Status:** CANDIDATE
+Structural CAD continuity and selected packaging checks support further detail work. They do not prove frame strength, joints, manufacturability or real assembly. Ordinary shutter service must preserve the fixed rear datum. P1 may use staged tool-assisted service; complete cassette removal is not assumed possible merely because a final installed model exists.
 
-The central core acts as the primary structural reference for the camera.
+DM22 is the current P1 back. Its true mount datum, seating, registration, locking, safe removal and synchronization require real evidence. The back retains its own power, image processing and storage. An external envelope or synchronization model cannot establish full compatibility.
 
-Its intended functions include:
+## FOCUS-H2, Universal Iris and Optical Insert
 
-- maintaining alignment between front and rear modules
-- supporting the digital-back interface
-- supporting the front optical module
-- carrying the viewfinder structure
-- providing reference geometry for future accessories and electronics
+FOCUS-H2 is the current front direction: a large-diameter manual focusing mechanism converts ring input into axial movement of a non-rotating optical cage. Actual cage / lens displacement is called **q**. Direct q measurement is required; ring angle alone is not evidence of actual lens position.
 
-The current geometry remains under simulation and has not been manufacturing-frozen.
+The shared Universal Iris is inside this moving cage and moves with the optical groups during focusing. Its actual blades, actuation, aperture feedback and service connections remain to be implemented. The real reference lens must be compatible with that shared aperture relationship; compatibility cannot be created by assigning an identity or calibration profile to placeholder geometry.
 
-## Rear Digital-Back Interface
+The intended user-replaceable Optical Insert resembles a mini large-format lensboard. Each insert does not carry a complete focusing mechanism, shutter and electronics system. GEN1 / P1 begins with **one reference lens**, not universal lens compatibility. Real optical geometry, datums, captured locking, repeatable seating and light-safe exchange remain open.
 
-**Status:** CANDIDATE / SIMULATION
+## Body-mounted shutter
 
-The rear interface is intended to allow different digital backs or adapter plates to be attached to the camera core.
+The current direction is **K3 flexible dual-curtain + ACT-E direct closed-loop electric drive**. P1-01_SHUTTER_IMPL02 is the latest applicable shutter milestone. It retains a right-side drive arrangement and an optical / coded direct bar reference candidate, with independent endpoint evidence still required. Direct curtain-bar sensing and H2 q sensing are separate functions.
 
-Primary design goals include:
+**IMPLEMENTATION HOLD — NOT READY FOR CONTROLLED BENCH PLANNING.** Assembly and bearing service are not closed; hard interferences and incomplete safety mechanisms remain. Main-power-loss controlled close is an architecture under study. Total-energy-loss autonomous mechanical close is **NOT CLOSED / NOT VALIDATED**. No working shutter, exposure performance or speed capability is claimed.
 
-- repeatable positioning
-- controlled axial seating
-- minimal alignment shift after removal and reinstallation
-- independent positioning and clamping functions
-- replaceable adapter architecture
+## D3, framing and focus guidance
 
-The final locking mechanism and physical interface geometry remain under development.
+D3 retains direct optical scene viewing. The current information concept is an **electronic frameline plus three small focus cue lights: NEAR / OK / FAR**. Detailed settings and fault information belong on the body display. This does not reopen a full HUD.
 
-## Front / Lens Module Interface
+An independent electronic ranging subsystem supplies subject-distance information. Body control compares distance, actual q and the appropriate lens calibration to provide guidance. Calibration validity and measurement freshness matter; unknown inputs must not produce a false OK cue. This is manual focusing assistance, not a physically verified autofocus system.
 
-**Status:** HOLD / DEVELOPMENT STUDY
+The earlier VF13 fixed-brightline study remains useful principle evidence, but it is not an implemented electronic frameline. D3 optical performance, frameline visibility, cue visibility, alignment and eye-position behavior still need physical validation.
 
-The front interface is intended to support interchangeable optical modules.
+## P1 priorities and release boundary
 
-Possible modules may include:
+Function, adjustability, repeatability, safety and serviceability take priority over weight, industrial design and product packaging. Larger hardware, local packaging exceptions and external development power are acceptable candidates when their effects are documented; these allowances do not resolve safety or datum requirements.
 
-- conventional lens mounts
-- fixed-lens modules
-- bellows-based systems
-- experimental shutter assemblies
+Lightweight product optimization is deferred until after P1 validation. Magnesium, CFRP and hybrid structures remain possible later research; they are not designed material substitutions. No parallel GEN1-L CAD is introduced.
 
-The latest integrated closure study combined retention, preload, safety, service, and lens-envelope concepts into one candidate, but did not achieve digital closure.
+Source basis: CAMERA_P1_BASELINE01 system / status / blocker registers, CAMERA_GEN1_COMPACT01 integration and portability reviews, and P1-01_SHUTTER_IMPL02 gate / placement / sensing / safety reviews. These are private engineering sources, summarized here under the [release policy](../../PUBLIC_RELEASE_POLICY.md).
 
-The subsystem remains on HOLD because unresolved CAD-level conflicts, service paths, and lens-envelope questions still require new evidence.
+## Related documents
 
-The final interface standard has not yet been selected.
-
-## Optical Viewfinder
-
-**Status:** CANDIDATE / SIMULATION
-
-The current architecture uses a direct optical viewfinder integrated into the camera structure.
-
-Design goals include:
-
-- comfortable eye position
-- useful field coverage
-- compact packaging
-- compatibility with multiple optical modules
-- minimal interference with the camera body and user ergonomics
-
-Several optical configurations have been evaluated, including rejected and retained candidates.
-
-Physical optical bench validation has not yet been completed.
-
-## Frameline / Cue Subsystem
-
-**Status:** PRINCIPLE-VALIDATION CANDIDATE / SIMULATION
-
-A staged framing-information architecture is now being studied alongside the retained direct-view finder.
-
-The publicly retained direction prioritizes:
-
-- fixed optical framelines for first principle validation
-- optional small cue information as a later supplement
-- dynamic or profile-selectable correction only if later validation justifies the added complexity
-
-No module envelope, optical window, actuator, connector, or camera-body cutout is frozen.
-
-## Mechanical Datum Architecture
-
-**Status:** CANDIDATE / SIMULATION
-
-A central design principle of the project is to separate:
-
-- positioning
-- axial seating
-- clamping
-
-where practical.
-
-This is intended to improve repeatability and reduce the influence of clamping force on module alignment.
-
-Tolerance simulations are currently being used to evaluate the effectiveness of this architecture.
-
-## Electronics
-
-**Status:** ARCHITECTURE / SOFTWARE SIMULATION
-
-Electronics are now a defined parallel architecture track. System-level work covers control, communication, power, I/O, user-interface, and interface-control responsibilities, while physical implementation remains secondary to mechanical and optical validation.
-
-Potential functions include:
-
-- shutter control
-- digital-back communication
-- exposure control
-- power management
-- viewfinder information
-- accessory interfaces
-
-Executable software models are currently used to evaluate control states, degraded behavior, power architecture, user flows, and interface responsibilities.
-
-No PCB, connector, bus standard, battery system, or digital-back protocol is frozen.
-
-The mechanical architecture is being developed so that electronic systems can evolve without requiring a complete redesign of the camera platform.
-
-## Architecture Principles
-
-The current development follows several general principles:
-
-- modularity
-- replaceable interfaces
-- separation of positioning and clamping
-- documentation of rejected concepts
-- simulation before manufacturing
-- progressive validation
-- preservation of design history
-
-## Current Validation Level
-
-The current architecture is primarily supported by:
-
-- CAD development
-- geometric studies
-- optical simulation
-- tolerance simulation
-- interface analysis
-
-It has not yet been validated as a complete physical camera system.
-
-## Related Documents
-
-- [Current Project State](../overview/current-state.md)
-- [Electronics & Control Architecture](electronics-control-overview.md)
-- [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
-- [DD-001 — Modular Camera Platform Architecture](../design-decisions/DD-001-modular-platform-architecture.md)
-- [DD-002 — Separate Positioning, Seating, and Clamping Functions](../design-decisions/DD-002-separate-positioning-seating-clamping.md)
-- [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
-- [FM2_CLOSURE03 — Digital Closure Review](../development-log/fm2-closure03-digital-closure-review.md)
-- [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
-
-Future public documents may cover individual subsystems in greater detail as they are reviewed for release.
+- [Current state](../overview/current-state.md)
+- [Subsystem status](../overview/subsystem-status.md)
+- [Evidence roadmap](../overview/physical-validation-roadmap.md)
+- [Electronics and control](electronics-control-overview.md)
+- [P1 transition and superseded architecture](../development-log/p1-functional-prototype-transition.md)
