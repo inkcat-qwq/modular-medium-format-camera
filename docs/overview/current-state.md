@@ -1,133 +1,62 @@
 # Current Project State
 
-> **Status:** Pre-prototype / Simulation  
-> Last updated: September 2026
+> **Current phase:** P1 Functional Prototype Development  
+> **System status:** Functional prototype development; complete physical camera not verified  
+> **Updated:** 2026-09-28
 
-This document provides a high-level snapshot of the currently published development state of the Modular Medium Format Camera project.
+The active mainline is **P1 FUNCTIONAL PROTOTYPE**. The objective is the first camera that can complete the real shooting chain. The phase has changed from architecture / simulation toward implementation; this is not a claim that a working prototype already exists.
 
-> **Public documentation note:** Private internal development may be ahead of the milestones described here.
+## Current configuration
 
-## System Architecture
+| Active subsystem | Current direction |
+| --- | --- |
+| BODY3 | 645-class maximum optical architecture; fixed rear datum, modular rear adapter, D3 shoulder finder and body-mounted shutter. |
+| P1-01 Shutter | K3 flexible dual-curtain + ACT-E direct closed-loop electric drive. IMPL02 is the latest applicable shutter state. |
+| FOCUS-H2 | Large-diameter manual focusing with a non-rotating moving optical cage and direct actual q measurement. |
+| Universal Iris | Shared aperture in the moving optical cage, moving with focus; actual mechanism still required. |
+| Optical Insert | Lensboard-like replaceable optical carrier; one reference lens initially; real lens data and locking remain open. |
+| D3 | Retained direct optical scene path; physical optical validation required. |
+| Frameline / focus cues | Electronic frameline and three small NEAR / OK / FAR cue lights as functional requirements; no full HUD. |
+| Electronic Ranging | Independent subject-distance measurement, compared with actual q and lens calibration for manual focus guidance. |
+| DM22 interface | P1 back; true mounting, registration, locking and synchronization remain unverified. |
+| Electronics / Power / UI | Body supervision, shutter control, power and safe-power responsibilities, range / q / iris / display integration; real hardware required. |
 
-The project is currently based on a modular camera architecture consisting of:
+## Latest shutter gate
 
-- a central structural camera core
-- a replaceable digital-back interface
-- interchangeable front and lens modules
-- an integrated direct optical viewfinder
-- independent mechanical datum and clamping systems
+**P1-01_SHUTTER_IMPL02: IMPLEMENTATION HOLD — NOT READY FOR CONTROLLED BENCH PLANNING.**
 
-The current architecture remains experimental and has not been frozen for manufacturing.
+The right-side drive arrangement is the retained P1 implementation candidate. Optical / coded direct bar sensing replaces the earlier packaging candidate, but the custom sensing arrangement is not qualified hardware. Installed-state improvements do not demonstrate a complete assembly or maintenance route.
 
-## Current Development Areas
+Remaining blockers include hard interferences, incomplete assembly / bearing service, incomplete mechanical release and capture, and unverified power / reserve / sensing hardware. Main-power-loss controlled close is an architecture under study. Total-energy-loss autonomous mechanical close is **NOT CLOSED / NOT VALIDATED**. Modelled closing motion does not establish safe real closing.
 
-### Camera Body
+## System blockers
 
-**Status:** CANDIDATE / SIMULATION
+- **Shutter / power:** drive and packaging implementation; controlled closing; main and safety power; complete assembly and maintenance paths.
+- **H2 / q:** actual motion mechanism, support / retention, repeatability and direct q sensing integration.
+- **Iris / Optical Insert:** actual aperture mechanism; datums, locking and reinstall repeatability; real reference-lens geometry and aperture compatibility.
+- **DM22:** measured mounting datum, registration, locking, removal, synchronization and actual image-storage confirmation.
+- **D3 / range / UI:** consistent physical finder configuration, electronic frameline and cue visibility, ranging behavior and calibration.
+- **Electronics / body:** real hardware, fault behavior and interconnects; structural joints, service and datum preservation.
 
-The current body architecture is being evaluated for structural layout, module integration, and interface repeatability.
+No complete prototype, working shutter, validated lens / iris, full DM22 compatibility, manufacturing readiness or production readiness is claimed.
 
-### Front Module / Closure
+## Function first; portability deferred
 
-**Status:** HOLD / DEVELOPMENT STUDY
+P1 prioritizes function, adjustability, repeatability, safety and serviceability. It may be heavier or thicker, use larger actuators and PCBs, external debug power, and ordinary aluminum, steel and standard parts. These allowances do not waive functional or safety gates.
 
-Front-module architecture has progressed through integrated closure, retention, preload, safety, and lens-envelope studies.
+COMPACT01 recovered native CAD delivery while its product portability gate remained open. CAMERA_P1_BASELINE01 reclassified weight and packaging optimization as **DEFERRED PRODUCT OPTIMIZATION / POST-P1 LIGHTWEIGHT PRODUCT REDESIGN**. This is a deferral, not proof that portability is solved. Possible magnesium, CFRP or hybrid structures remain future intent; no GEN1-L CAD is established.
 
-The latest published integration study did not achieve digital closure. Several mechanical and service-path conflicts remain unresolved, so the front-module mechanism is intentionally held before any release or body-revision promotion.
+## What changed from the old public state
 
-Further progress requires targeted physical or supplier-backed evidence rather than additional parameter tuning alone.
+BODY2 is historical. FM2 / FM-C and the old Copal-in-each-lens architecture are **SUPERSEDED / HISTORICAL HOLD**. H2, the moving universal iris and Optical Insert define the current front direction. VF13 fixed-brightline work and SYS software studies remain historical evidence, not proof of the current electronic framing or hardware implementation.
 
-### Digital Back Interface
+## Next gate and source scope
 
-**Status:** CANDIDATE / SIMULATION
+Continue P1-01 shutter implementation until its function, safety, assembly and measurement gaps can support a separately reviewed next step. The [roadmap](physical-validation-roadmap.md) then proceeds through P1-02 H2, P1-03 iris / insert, P1-04 DM22, P1-05 electronics / power / range / UI, P1-06 integration and P1-07 controlled bench / prototype release planning. It is not a calendar schedule or current bench authorization.
 
-Development currently focuses on:
+This snapshot uses CAMERA_P1_BASELINE01 for the system strategy, COMPACT01 for inherited host / product-study evidence and P1-01_SHUTTER_IMPL02 for current shutter details. Earlier gates remain history where superseded. Unknown physical facts remain TBD; they are not filled with nominal values.
 
-- repeatable positioning
-- axial seating
-- independent clamping
-- removable digital-back adapters
-
-Physical interface geometry has not yet been fully validated.
-
-### Optical Viewfinder
-
-**Status:** CANDIDATE / SIMULATION
-
-A direct optical viewfinder architecture remains the primary publicly documented viewing direction.
-
-Current work now includes two distinct layers:
-
-- the retained direct-view optical finder
-- a staged frameline / cue architecture study
-
-A fixed optical frameline path has been retained for independent principle validation, while dynamic correction and more complex electronic framing remain later-stage options.
-
-The combined finder and frameline system has not yet been physically bench-validated.
-
-### Tolerance Analysis
-
-**Status:** SIMULATION / SENSITIVITY STUDY
-
-BODY2_TOL01 now provides a reproducible assumed-input Monte Carlo and analytical study of the front-module, core, rear-adapter, and digital-back error chain.
-
-The study is useful for identifying sensitive interface responsibilities, calibration limits, seating assumptions, and removal / reinstallation effects.
-
-It does not provide real manufacturing yield, a released GD&T scheme, or optical focus acceptance. The next step is to replace assumed inputs with measured mechanical evidence.
-
-### Electronics / System Control
-
-**Status:** ARCHITECTURE / SOFTWARE SIMULATION
-
-Control, communication, power, I/O, user-interface, and interface-control studies have now been developed as coordinated system-level architecture tracks.
-
-Executable software models are being used to evaluate states, degraded modes, power behavior, interconnect responsibilities, and user flows.
-
-No PCB, connector, bus standard, battery system, or digital-back protocol is frozen, and no system electronics have yet been physically validated.
-
-## Major Open Questions
-
-- final rear-interface geometry
-- locking and clamping mechanism
-- manufacturing repeatability
-- direct-view and frameline physical eye-box performance
-- real frameline / combiner optical behavior
-- front-module closure, retention, and real-lens compatibility
-- digital-back synchronization and electrical boundary
-- real power, contact, and harness behavior
-- environmental sealing
-- physical prototype validation
-
-## Next Development Gate
-
-The next major goal is to move selected simulated subsystems toward physical interface and bench validation.
-
-Priority validation areas include:
-
-- digital-back mechanical and synchronization evidence
-- direct-view finder and fixed-frameline bench testing
-- real eye-position and packaging checks
-- front-module / closure physical validation
-- real power, contact, and interconnect tests
-
-See the [Physical Validation Roadmap](physical-validation-roadmap.md) for the public evidence sequence and exit criteria.
-
----
-
-This document describes the current development state only.
-
-Values and architectures described throughout the repository should not be considered manufacturing specifications unless explicitly marked `FROZEN` or `VALIDATED`.
-
-
-## Related Documents
-
-- [Subsystem Status Matrix](subsystem-status.md)
-- [Physical Validation Roadmap](physical-validation-roadmap.md)
-- [System Architecture Overview](../architecture/system-overview.md)
-- [Electronics & Control Architecture](../architecture/electronics-control-overview.md)
-- [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
-- [BODY2_REV05 — Architecture Integration](../development-log/body2-rev05-architecture-integration.md)
-- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](../development-log/body2-tol01-mechanical-tolerance-study.md)
-- [FM2_CLOSURE03 — Digital Closure Review](../development-log/fm2-closure03-digital-closure-review.md)
-- [Revision History](../development-log/revision-history.md)
+- [System architecture](../architecture/system-overview.md)
+- [Subsystem status and evidence levels](subsystem-status.md)
+- [P1 transition](../development-log/p1-functional-prototype-transition.md)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)

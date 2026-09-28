@@ -1,175 +1,54 @@
 # Electronics and Control Architecture Overview
 
-> **Status:** ARCHITECTURE / SOFTWARE SIMULATION  
-> **Development stage:** Pre-prototype  
-> **Hardware validation:** Not yet performed  
-> **Last updated:** September 2026
+> **Current phase:** P1 Functional Prototype Development  
+> **Status:** Implementation required; historical software models retained  
+> **Hardware validation:** Not yet completed  
+> **Updated:** 2026-09-28
 
-This document summarizes the currently published electronics, control, power, user-interface, and interconnect architecture of the Modular Medium Format Camera project.
+P1 electronics must support BODY3, K3 / ACT-E, H2, the moving universal iris, one reference Optical Insert, D3 assistance and DM22 synchronization. SYS_ELEC01, SYS_POWER01, SYS_IO01, SYS_UI01 and SYS_ICD01 remain useful development history. Their old BODY2 / FM-C / Copal assumptions and load budgets do not define the current hardware.
 
-The work described here is architectural and software-simulated. It does not represent a released PCB, connector standard, wiring harness, battery design, or digital-back protocol.
+## Responsibilities
 
----
+| Domain | Intended responsibility | Evidence still required |
+| --- | --- | --- |
+| Body supervision | Coordinate preparation, calibration validity, user input, exposure transaction and faults | Real controller, timing, fault handling and interconnects |
+| Shutter local control | ACT-E trajectories, direct curtain-bar position, independent endpoint checks and closing states | Drive / sensor hardware, actual motion, safe stopping and closing |
+| H2 / q | Measure actual non-rotating cage position | Sensor integration, zero / direction, repeatability and calibration |
+| Iris / Optical Insert | Aperture status and reference-lens identity / calibration responsibilities | Actual iris, connections and real optical profile |
+| Ranging | Independent subject-distance estimate with validity and freshness | Device, target selection, environmental behavior and calibrated pairing |
+| Finder assistance | Electronic frameline and three small NEAR / OK / FAR focus cues | Physical optical path, visibility and invalid-data behavior |
+| Body UI | Detailed information, preparation, faults and unknown outcomes | Physical controls / display and human-factors evidence |
+| DM22 boundary | Externally supported preparation / synchronization only | Real external electrical interface and observed capture behavior |
 
-## Scope
+The focus comparison uses **subject distance + actual lens q + lens calibration**. Manual focusing remains the intended operation. Unknown, stale or mismatched calibration data must not become an OK cue. The optical scene remains in D3; detailed settings remain on the body display. A full HUD is not the current architecture.
 
-The electronics work is intended to support the modular mechanical platform without making the camera dependent on one permanently integrated electronic architecture.
+## Power and closing are separate evidence gates
 
-Current studies cover:
+Normal power, shutter transient loads and safety reserve have different responsibilities. P1 may use external development power and larger boards / actuators, but actual load, isolation, regeneration, thermal behavior and fault response must still be established. Historical low-power Copal assumptions cannot be transferred to ACT-E.
 
-- body control responsibilities
-- module identity and calibration ownership
-- user controls and status presentation
-- exposure coordination
-- power and protection architecture
-- modular interconnect responsibilities
-- system-interface control
+**Main-power-loss controlled close:** architecture under study, relying on independently available safety energy, control and closing-state evidence. Energy calculations alone do not qualify reserve hardware or a safe power path.
 
----
+**Total-energy-loss autonomous mechanical close:** **NOT CLOSED / NOT VALIDATED**. The passive mechanism remains a candidate with incomplete release / capture and unmeasured dynamic behavior. Neither a manual cover nor an external emergency supply proves autonomous closing after all usable energy is lost.
 
-## Control and Communication
+P1-01_SHUTTER_IMPL02 remains **IMPLEMENTATION HOLD — NOT READY FOR CONTROLLED BENCH PLANNING**. No circuit, pinout, reserve specification, safety-mechanism geometry or hardware wiring guide is released here.
 
-The body-level controller is currently modeled as responsible for:
+## Exposure and digital-back boundary
 
-- discovering and identifying attached modules
-- validating calibration state
-- evaluating focus-position validity
-- managing user input
-- coordinating exposure-related states
-- issuing display or frameline requests
-- entering defined degraded modes when information is invalid
+The target sequence is optical viewing, range-assisted manual focus, iris setting, preparation, a fresh release request, exposure, controlled close, actual DM22 storage confirmation and light-safe reset. This is a validation objective, not a completed capture record.
 
-The body is not intended to perform digital-back image processing.
+DM22 retains independent power, processing and storage. Body control is not assumed to read RAW files or have an automatic write-complete signal. Shutter closed, synchronization observed and image saved are different facts; storage confirmation may require user observation on the back. Fault or ambiguous outcome must not cause an automatic retry.
 
-Communication links remain architectural candidates. No final bus, connector, pinout, MCU, or physical signaling standard has been selected.
+## Interfaces and calibration
 
----
+Positioning and load-bearing remain mechanical responsibilities; contacts and software identity do not establish optical registration. P1 requires traceable pairing of the body, adapter / back and real reference lens, with q and range data validity kept explicit. Unknown geometry or signals remain TBD rather than being interpreted as zero or success.
 
-## Digital-Back Boundary
+MCUs, PCBs, buses, harnesses, connectors, the integrated battery system and the real DM22 synchronization interface are not frozen. Local component candidates in IMPL02 do not constitute a released system BOM. Protection, hardware timing, ESD / EMC, connector durability, thermal behavior and control ergonomics remain physical evidence needs.
 
-The digital back remains a separately powered subsystem.
+Source basis: CAMERA_P1_BASELINE01 requirements / system baseline and P1-01_SHUTTER_IMPL02 safety-power / sensing reviews. The P1 system baseline takes precedence over conflicting historical SYS interface assumptions.
 
-The camera body may eventually coordinate selected synchronization or readiness functions, but the real electrical boundary has not yet been validated.
-
-The current public architecture therefore treats back communication and synchronization as an interface problem rather than an implemented feature.
-
-No public document should be interpreted as a wiring guide for a specific back.
-
----
-
-## Power Architecture
-
-Power studies have been used to compare relative load classes, operating states, future actuator reservations, and protection behavior.
-
-These studies are useful for architecture sizing, but they do not define:
-
-- a battery chemistry
-- battery capacity
-- rail voltages
-- regulator selection
-- charging architecture
-- final thermal behavior
-- actual measured runtime
-
-The current mechanical design should therefore preserve serviceable space for logic, protection, and power functions without freezing exact hardware envelopes.
-
----
-
-## Interconnect Architecture
-
-The interconnect study separates several functional interface classes rather than forcing all modules onto one universal connector.
-
-The current principles include:
-
-- removable serviceable contact structures where practical
-- protection boundaries between subsystems
-- separate treatment of power and data responsibilities
-- controlled behavior during module insertion and removal
-- isolation of future actuator loads from sensitive sensing or logic paths
-- maintenance access that does not disturb precision mechanical datums
-
-Final connector geometry, conductor count, pin sequence, cable construction, and EMC strategy remain unresolved.
-
----
-
-## User Interface
-
-A compact physical-control approach is currently being studied.
-
-The public design intent is to keep core operation understandable even when optional electronic features are unavailable.
-
-The retained principles include:
-
-- mechanical camera functions should remain distinct from software-only state
-- invalid or unavailable information should be shown as unavailable rather than silently substituted
-- exposure coordination should fail safe rather than trigger a delayed or ambiguous capture
-- external status presentation should remain simple
-- finder electronics should supplement, not replace, the direct optical scene
-
-No industrial-design control layout, button geometry, screen opening, or display technology is frozen.
-
----
-
-## System Interface Baseline
-
-A system-level interface-control baseline has now been established internally to coordinate:
-
-- mechanical responsibilities
-- optical responsibilities
-- electrical responsibilities
-- calibration ownership
-- module state and data ownership
-
-The baseline is primarily a consistency and traceability tool.
-
-It does not represent a design freeze, and no system hardware requirement is currently considered physically verified.
-
----
-
-## Validation Level
-
-Current evidence includes:
-
-- executable software state models
-- fault and degraded-mode scenarios
-- power and energy models
-- interconnect fault models
-- user-flow simulations
-- interface-control and traceability documents
-
-Physical validation has not yet covered:
-
-- real digital-back synchronization
-- real harnesses or contacts
-- EMC / ESD behavior
-- short-circuit tolerance
-- battery and regulator behavior
-- thermal performance
-- control ergonomics
-- hardware timing
-- connector durability
-
----
-
-## Current Direction
-
-Electronics are now a defined parallel architecture track rather than a purely future placeholder.
-
-However, the mechanical and optical platform remains the primary physical-validation focus.
-
-The current development strategy is therefore:
-
-1. maintain clear electronic subsystem responsibilities
-2. keep hardware choices replaceable
-3. validate real external interfaces before freezing electronics
-4. avoid allowing unverified electronics assumptions to drive precision mechanical geometry
-
----
-
-## Related Documents
-
-- [System Architecture Overview](system-overview.md)
-- [Current Project State](../overview/current-state.md)
-- [VF13_FRAME_ARCH01 — Frameline Architecture Study](../development-log/vf13-frameline-architecture.md)
-- [Revision History](../development-log/revision-history.md)
+- [System architecture](system-overview.md)
+- [Subsystem status](../overview/subsystem-status.md)
+- [Evidence roadmap](../overview/physical-validation-roadmap.md)
+- [Shutter development](../development-log/shutter-architecture-development.md)
+- [SYS historical milestones](../development-log/revision-history.md#electronics-and-system-integration)
 - [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md)
