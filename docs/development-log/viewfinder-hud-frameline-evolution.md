@@ -1,5 +1,9 @@
 # Viewfinder, HUD, and Frameline Evolution
 
+> **HISTORICAL RECORD — not the current architecture or next-work plan.** D3 optical scene viewing is retained. P1 requires electronic frameline and three NEAR / OK / FAR focus cues; this earlier fixed-brightline / HUD history does not prove those functions are implemented.  
+> The original study text below is preserved; its uses of “current”, “retained” and “next gate” refer to that historical milestone. See [P1 transition](p1-functional-prototype-transition.md) and [current P1 state](../overview/current-state.md).
+
+
 > **Document type:** Development history  
 > **Scope:** Publicly documented viewfinder-information architecture  
 > **Development stage:** Pre-prototype / Simulation  

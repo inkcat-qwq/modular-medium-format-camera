@@ -1,5 +1,9 @@
 # VF13_FRAME_ARCH01 — Frameline Architecture Study
 
+> **HISTORICAL RECORD — not the current architecture or next-work plan.** D3 optical scene viewing is retained. P1 requires electronic frameline and three NEAR / OK / FAR focus cues; this earlier fixed-brightline / HUD history does not prove those functions are implemented.  
+> The original study text below is preserved; its uses of “current”, “retained” and “next gate” refer to that historical milestone. See [P1 transition](p1-functional-prototype-transition.md) and [current P1 state](../overview/current-state.md).
+
+
 > **Status:** PRINCIPLE-VALIDATION CANDIDATE / SIMULATION  
 > **Development stage:** Pre-prototype  
 > **Validation:** Numerical and architecture study only  

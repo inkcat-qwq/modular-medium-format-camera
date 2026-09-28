@@ -1,5 +1,9 @@
 # FM2_CLOSURE03 — Digital Closure Review
 
+> **HISTORICAL RECORD — not the current architecture or next-work plan.** FM2 / FM-C and the Copal-based front architecture are SUPERSEDED / HISTORICAL HOLD. FOCUS-H2, the shared moving iris and Optical Insert now define the front direction.  
+> The original study text below is preserved; its uses of “current”, “retained” and “next gate” refer to that historical milestone. See [P1 transition](p1-functional-prototype-transition.md) and [current P1 state](../overview/current-state.md).
+
+
 > **Status:** HOLD / DIGITAL CLOSURE NOT ACHIEVED  
 > **Development stage:** Pre-prototype  
 > **Validation:** CAD integration and analytical review only  

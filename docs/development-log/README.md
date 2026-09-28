@@ -1,132 +1,27 @@
 # Development Log
 
-This directory records the development history of the Modular Medium Format Camera project.
+The current phase is **P1 Functional Prototype Development**. This log preserves architecture changes, rejected concepts and evidence limits. Public summaries follow the [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md); source engineering packages remain private.
 
-The purpose of the development log is to preserve major architectural changes, experiments, rejected concepts, simulation milestones, and changes in design direction.
+## Current transition and key milestones
 
-These records are not intended to represent manufacturing specifications.
+- [P1 functional prototype transition](p1-functional-prototype-transition.md) — BODY2 / FM-C to BODY3 / P1, shared optics, function first and current blockers.
+- [BODY3 development](body3-development.md) — new structural responsibilities, fixed rear datum and the distinction between digital candidates and real structural validation.
+- [Shutter architecture development](shutter-architecture-development.md) — K3, ACT-S to ACT-E, SHUTTER04 and P1-01 through IMPL02; implementation remains on HOLD.
+- [September 2026 project evolution](2026-09-project-evolution.md) — original chronology followed by the later architecture transition.
+- [Revision history](revision-history.md) — milestone identifiers and their evidence scope.
 
-Public documentation may intentionally lag behind private internal development. See the [Public Release Policy](../../PUBLIC_RELEASE_POLICY.md).
+## Earlier studies — preserved as history
 
-## Documents
+- [BODY2_REV05 architecture integration](body2-rev05-architecture-integration.md) — former body architecture, superseded by BODY3.
+- [BODY2_TOL01 tolerance and repeatability](body2-tol01-mechanical-tolerance-study.md) — assumed-input sensitivity study; not a P1 manufacturing tolerance budget.
+- [FM2_CLOSURE03 digital closure review](fm2-closure03-digital-closure-review.md) — failed-to-close front mechanism; FM2 / FM-C is SUPERSEDED / HISTORICAL HOLD.
+- [VF13 frameline architecture](vf13-frameline-architecture.md) — fixed-brightline principle study; not implemented P1 electronic framing.
+- [Viewfinder, HUD and frameline evolution](viewfinder-hud-frameline-evolution.md) — relay / SIDE / VF9 / VF10 and later HUD / VF13 context; D3 scene viewing is retained.
+- [SYS electronics and interface history](revision-history.md#electronics-and-system-integration) — SYS_ELEC01, SYS_POWER01, SYS_IO01, SYS_UI01 and SYS_ICD01; software and ownership studies, not P1 hardware verification.
+- [Historical images](../../images/history/README.md) — old architecture visuals retained and labelled.
 
-- [BODY2_REV05 — Architecture Integration](body2-rev05-architecture-integration.md)  
-  Public architecture-integration review covering the transition toward the current structural, viewfinder, and rear-interface direction.
+Failed experiments remain part of the engineering record. Historical pages preserve their original conclusions and next-step proposals in the scope of the milestone; they do not control today's architecture or development order.
 
-- [BODY2_TOL01 — Mechanical Tolerance and Repeatability Study](body2-tol01-mechanical-tolerance-study.md)  
-  Sanitized summary of the assumed-input Monte Carlo and mechanical sensitivity study covering the removable front / rear interface chain.
+## Current navigation
 
-- [FM2_CLOSURE03 — Digital Closure Review](fm2-closure03-digital-closure-review.md)  
-  Sanitized review of a front-module integration candidate that intentionally remained on HOLD after unresolved CAD- and architecture-level conflicts were found.
-
-- [VF13_FRAME_ARCH01 — Frameline Architecture Study](vf13-frameline-architecture.md)  
-  Sanitized public summary of the fixed-brightline, cue, and later dynamic-frameline architecture study.
-
-- [Viewfinder, HUD, and Frameline Evolution](viewfinder-hud-frameline-evolution.md)  
-  Historical bridge from the retained direct-view finder through VF10 / VF11 / VF12 HUD studies and into the staged VF13 frameline direction.
-
-- [Project Evolution — September 2026](2026-09-project-evolution.md)  
-  Narrative overview of how the project evolved from early concepts to the current architecture.
-
-- [Revision History](revision-history.md)  
-  Historical index of body, interface, viewfinder, optical, and tolerance-study revision identifiers.
-
-## Log Structure
-
-Development records may include:
-
-- architecture revisions
-- mechanical interface studies
-- optical experiments
-- simulation milestones
-- rejected concepts
-- prototype results
-- major changes in design direction
-
-Detailed engineering decisions should be recorded separately in the
-[Design Decisions](../design-decisions/) directory.
-
-## Development Phases
-
-### Early Architecture Exploration
-
-The project began as an investigation into a modular medium-format digital camera architecture.
-
-Early work focused on:
-
-- camera core proportions
-- digital-back integration
-- front-module concepts
-- mechanical packaging
-- basic viewfinder placement
-
-Multiple structural configurations were explored before the current platform architecture emerged.
-
-### Structural Architecture Development
-
-Later work focused on defining a central structural core and separating the camera into major functional modules.
-
-Development increasingly emphasized:
-
-- repeatable module positioning
-- independent adapter structures
-- structural reference surfaces
-- separation of locating and clamping functions
-
-This work formed the basis of the current mechanical architecture.
-
-### Viewfinder Development
-
-Several optical viewfinder architectures were investigated.
-
-Development included:
-
-- finder placement studies
-- packaging and ergonomic studies
-- relay optical concepts
-- field-of-view studies
-- eye-position tolerance
-- candidate direct-view optical systems
-
-Several configurations were rejected due to optical or ergonomic limitations.
-
-The currently published direction uses an integrated direct optical viewfinder architecture.
-
-### Tolerance and Repeatability Studies
-
-Tolerance simulation was introduced before physical manufacturing in order to evaluate:
-
-- module alignment
-- seating repeatability
-- removal and reinstallation behavior
-- sensitivity to manufacturing variation
-
-These studies continue to inform the mechanical interface architecture.
-
-The current public tolerance milestone is BODY2_TOL01, which is explicitly a sensitivity study rather than a manufacturing-yield prediction.
-
-### Current Phase
-
-The project is currently in the:
-
-**Simulation / Pre-prototype**
-
-stage.
-
-The immediate objective is to move selected subsystem concepts toward physical validation while continuing architecture and simulation work.
-
-Current publicly documented parallel tracks now include frameline principle validation and system-level electronics / control architecture.
-
-## Philosophy
-
-Failed experiments are intentionally preserved.
-
-A rejected design may still contain useful information about:
-
-- constraints
-- trade-offs
-- packaging limits
-- optical limitations
-- mechanical failure modes
-
-The development history is therefore considered part of the project documentation rather than temporary working material.
+[Current state](../overview/current-state.md) · [System architecture](../architecture/system-overview.md) · [Subsystem status](../overview/subsystem-status.md) · [Evidence roadmap](../overview/physical-validation-roadmap.md) · [Design decisions](../design-decisions/)

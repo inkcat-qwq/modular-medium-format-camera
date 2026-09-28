@@ -1,5 +1,9 @@
 # BODY2_REV05 — Architecture Integration
 
+> **HISTORICAL RECORD — not the current architecture or next-work plan.** BODY2 is superseded by BODY3 as the active body direction.  
+> The original study text below is preserved; its uses of “current”, “retained” and “next gate” refer to that historical milestone. See [P1 transition](p1-functional-prototype-transition.md) and [current P1 state](../overview/current-state.md).
+
+
 > **Status:** CANDIDATE / SIMULATION  
 > **Development stage:** Pre-prototype  
 > **Validation:** CAD and simulation only  

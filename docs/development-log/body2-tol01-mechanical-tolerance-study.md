@@ -1,5 +1,9 @@
 # BODY2_TOL01 — Mechanical Tolerance and Repeatability Study
 
+> **HISTORICAL RECORD — not the current architecture or next-work plan.** This assumed-input BODY2 study is not a current P1 tolerance release.  
+> The original study text below is preserved; its uses of “current”, “retained” and “next gate” refer to that historical milestone. See [P1 transition](p1-functional-prototype-transition.md) and [current P1 state](../overview/current-state.md).
+
+
 > **Status:** SIMULATION / SENSITIVITY STUDY  
 > **Development stage:** Pre-prototype  
 > **Validation:** Assumed-input Monte Carlo and analytical geometry  
